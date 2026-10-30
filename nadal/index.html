@@ -10,8 +10,8 @@
 <meta property="og:title" content="El Nadal [manual d'ús] — Duo Suay">
 <meta property="og:description" content="Espectacle musical per cantar nadales tots junts, amb humor i per a tots els públics.">
 <meta property="og:url" content="https://duosuay.github.io/nadal/">
-<meta property="og:image" content="https://duosuay.github.io/nadal/inspectores.jpg">
-<meta property="og:image:width" content="1072">
+<meta property="og:image" content="https://duosuay.github.io/nadal/duo.jpg">
+<meta property="og:image:width" content="1080">
 <meta property="og:image:height" content="740">
 <link rel="canonical" href="https://duosuay.github.io/nadal/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -91,14 +91,17 @@ h2 em{font-weight:400;color:var(--grana)}
 .premissa{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
 .premissa p{margin:0 0 14px}
 .premissa p:last-child{margin-bottom:0}
-.retrat{position:relative;margin:0}
-.retrat img{width:100%;height:auto;border-radius:20px;box-shadow:0 22px 50px rgba(40,20,10,.22)}
-.retrat .nom{position:absolute;top:14px;background:#fbfaf6;border-radius:10px;overflow:hidden;box-shadow:0 8px 20px rgba(0,0,0,.3);text-align:center;min-width:96px}
-.retrat .nom.r{left:14px;transform:rotate(-2deg)}
-.retrat .nom.e{right:14px;transform:rotate(2deg)}
+.retrat{margin:0}
+.retrat .fotos{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.retrat .persona{position:relative}
+.retrat img{width:100%;height:auto;border-radius:18px;box-shadow:0 18px 40px rgba(40,20,10,.2)}
+.retrat .nom{position:absolute;bottom:-16px;background:#fbfaf6;border-radius:10px;overflow:hidden;box-shadow:0 8px 20px rgba(0,0,0,.3);text-align:center;min-width:96px}
+.retrat .nom{left:50%}
+.retrat .nom.r{transform:translateX(-50%) rotate(-2deg)}
+.retrat .nom.e{transform:translateX(-50%) rotate(2deg)}
 .retrat .nom span{display:block;background:var(--grana);color:#fff;font-family:var(--maq);font-size:.62rem;letter-spacing:.2em;padding:4px 10px 3px}
 .retrat .nom b{display:block;font-family:var(--serif);font-size:1.15rem;padding:3px 12px 5px}
-.retrat figcaption{font-size:.85rem;color:var(--tinta2);margin-top:10px;text-align:center}
+.retrat figcaption{font-size:.85rem;color:var(--tinta2);margin-top:28px;text-align:center}
 
 /* Temari */
 .temari{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-top:32px}
@@ -261,8 +264,8 @@ footer p{margin:6px 0}
   .llisca{display:block}
   .motiu{display:grid;grid-template-columns:48px 1fr;column-gap:14px}
   .motiu .ic{grid-row:span 2;margin:0}
-  .retrat .nom{min-width:80px;top:10px}
-  .retrat .nom.r{left:10px}.retrat .nom.e{right:10px}
+  .retrat .fotos{gap:10px}
+  .retrat .nom{min-width:72px}
   .retrat .nom b{font-size:1rem}
   .camps{grid-template-columns:1fr}
   .formulari{padding:26px 18px 22px}
@@ -329,9 +332,10 @@ footer p{margin:6px 0}
       <p>Ningú no s'ho mira des de fora: tothom en surt havent cantat.</p>
     </div>
     <figure class="retrat revela">
-      <img src="inspectores.jpg" width="1072" height="740" alt="La Rosa i l'Eli, amb jaqueta fosca i l'acreditació d'inspectora penjada al coll">
-      <div class="nom r"><span>INSPECTORA</span><b>Rosa</b></div>
-      <div class="nom e"><span>INSPECTORA</span><b>Eli</b></div>
+      <div class="fotos">
+        <div class="persona"><img src="rosa.jpg" width="540" height="740" alt="La Rosa, amb jaqueta fosca i l'acreditació d'inspectora, al faristol"><div class="nom r"><span>INSPECTORA</span><b>Rosa</b></div></div>
+        <div class="persona"><img src="eli.jpg" width="540" height="740" alt="L'Eli, amb jaqueta fosca, l'acreditació d'inspectora i una carpeta"><div class="nom e"><span>INSPECTORA</span><b>Eli</b></div></div>
+      </div>
       <figcaption>La Rosa i l'Eli, del Duo Suay, en el paper de les dues inspectores.</figcaption>
     </figure>
   </div>
