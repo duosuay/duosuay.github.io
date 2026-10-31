@@ -4,107 +4,188 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>La Taverna de la Lola · Duo Suay</title>
-<meta name="description" content="Concert del Duo Suay: havaneres, boleros, valsets i rumbes en una taverna marinera. Dues veus en directe i cançons pròpies. 60 minuts.">
+<meta name="description" content="Espectacle musical del Duo Suay: havaneres, boleros, valsets i rumbes en una taverna marinera. Dues veus i històries de mar. 60 minuts.">
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#171110">
+<meta name="theme-color" content="#163a5f">
 <meta property="og:title" content="La Taverna de la Lola · Duo Suay">
-<meta property="og:description" content="Havaneres, boleros, valsets i rumbes amb les històries de la gent del mar.">
+<meta property="og:description" content="Dues veus. Històries de mar. Un viatge musical ple d'emoció i proximitat.">
 <meta property="og:url" content="https://duosuay.github.io/taverna/">
-<meta property="og:image" content="https://duosuay.github.io/img/duo-cantant.jpg">
+<meta property="og:image" content="https://duosuay.github.io/taverna/img/escenografia.jpg">
 <link rel="canonical" href="https://duosuay.github.io/taverna/">
 <link rel="icon" href="../img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Satisfy&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --fons:#171110; --fons2:#211917; --carta:#2b201d; --vora:#3d2e2a;
-  --or:#e0a458; --or2:#f2c98a;
-  --text:#f4ebe2; --text2:#b3a294;
-  --serif:'Cormorant Garamond',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
+  --mar:#163a5f; --mar2:#24527f; --mar3:#0e2741;
+  --cel:#dbe8f2; --cel2:#a9c6de;
+  --fusta:#6b4a2f; --fusta2:#9a7550; --fusta3:#3a2618;
+  --sorra:#f7f1e6; --sorra2:#ece2cf;
+  --rovell:#b5532e; --rovell2:#d9774f;
+  --tinta:#1f2f40; --tinta2:#5b6a78;
+  --titol:'Cinzel',Georgia,serif; --serif:'Cormorant Garamond',Georgia,serif; --ma:'Satisfy',cursive; --sans:'Inter',system-ui,sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--fons);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;padding-bottom:140px}
+body{margin:0;background:var(--sorra);color:var(--tinta);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body.escoltant footer{padding-bottom:150px}
+img{display:block;max-width:100%;height:auto}
 a{color:inherit}
-.wrap{max-width:980px;margin:0 auto;padding:0 20px}
-h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1;margin:0}
-h2{font-size:clamp(1.9rem,4vw,2.6rem);margin-bottom:14px;color:var(--or2)}
-.etiqueta{font-size:.76rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--or);margin:0 0 12px}
-.sec{padding:72px 0}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3{margin:0;line-height:1.1}
+h2{font-family:var(--titol);font-weight:700;font-size:clamp(1.7rem,3.6vw,2.4rem);color:var(--mar);letter-spacing:.02em;margin-bottom:6px}
+.ma{font-family:var(--ma);color:var(--rovell);font-size:clamp(1.4rem,2.6vw,1.8rem);line-height:1.2;margin:0 0 20px}
+.etiqueta{font-size:.76rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--rovell);margin:0 0 10px;display:flex;align-items:center;gap:10px}
+.etiqueta::before{content:"⚓";font-size:.95rem;letter-spacing:0}
+.sec{padding:84px 0}
+p{margin:0 0 14px}
 
-.torna{position:absolute;top:20px;left:20px;z-index:3;font-size:.9rem;color:var(--text2);text-decoration:none;display:inline-flex;gap:8px;align-items:center}
-.torna:hover{color:var(--or2)}
+.torna{position:absolute;top:18px;left:20px;z-index:3;font-size:.9rem;color:var(--mar2);text-decoration:none;font-weight:500}
+.torna:hover{color:var(--rovell)}
 
-.hero{position:relative;text-align:center;padding:110px 0 80px;background:radial-gradient(ellipse at 50% -10%,#4a2e22 0%,transparent 65%);overflow:hidden}
-.hero svg{position:absolute;left:0;right:0;bottom:10px;width:100%;height:160px;opacity:.25;pointer-events:none}
-.fanal{font-size:3rem;line-height:1;display:block;margin-bottom:16px}
-.hero .gen{font-size:.8rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--text2);margin:0 0 14px}
-.hero h1{font-size:clamp(2.8rem,8vw,5rem);color:var(--or2);font-weight:700}
-.hero .duo{font-family:var(--serif);font-style:italic;font-size:1.4rem;color:var(--text2);margin:10px 0 28px}
-.hero .sub{max-width:34em;margin:0 auto 32px;color:#d8cabd;font-size:1.08rem}
-.xips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:34px}
-.xips span{font-size:.85rem;padding:7px 16px;border-radius:999px;border:1px solid var(--vora);background:var(--fons2)}
-.btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.98rem;text-decoration:none;border-radius:999px;padding:14px 26px;border:0;cursor:pointer;font-family:var(--sans);transition:transform .2s,background .2s}
-.btn-or{background:var(--or);color:#2b1a0c}
-.btn-or:hover{background:var(--or2);transform:translateY(-2px)}
-.btn-linia{color:var(--text);box-shadow:inset 0 0 0 1.5px var(--vora)}
-.btn-linia:hover{box-shadow:inset 0 0 0 1.5px var(--or)}
-.botons{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+/* Botons */
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.98rem;text-decoration:none;border-radius:999px;padding:14px 26px;border:0;cursor:pointer;font-family:var(--sans);transition:transform .2s,background .2s,box-shadow .2s}
+.btn-mar{background:var(--mar);color:#fff;box-shadow:0 10px 24px rgba(22,58,95,.25)}
+.btn-mar:hover{background:var(--mar2);transform:translateY(-2px)}
+.btn-linia{color:var(--mar);box-shadow:inset 0 0 0 1.5px var(--mar)}
+.btn-linia:hover{background:rgba(22,58,95,.07)}
+.botons{display:flex;flex-wrap:wrap;gap:12px}
 
-.dues{display:grid;grid-template-columns:1fr 1fr;gap:48px}
-.dues p{color:#d8cabd;margin:0 0 14px}
-.fitxa{background:var(--carta);border:1px solid var(--vora);border-radius:20px;padding:26px 26px 18px}
-.fitxa dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:10px 18px;font-size:.95rem}
-.fitxa dt{color:var(--text2)}
-.fitxa dd{margin:0}
+/* ---------- Portada ---------- */
+.hero{position:relative;overflow:hidden;background:radial-gradient(ellipse at 85% 30%,#fff 0%,var(--sorra) 55%)}
+.hero-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:40px;align-items:center;padding-top:70px;padding-bottom:40px}
+.ancora{display:flex;align-items:center;gap:14px;color:var(--rovell);margin-bottom:14px}
+.ancora::before,.ancora::after{content:"";height:2px;width:70px;background:var(--rovell);opacity:.8}
+.ancora span{font-size:1.9rem;line-height:1}
+.hero h1{font-family:var(--titol);font-weight:700;color:var(--mar);letter-spacing:.01em;font-size:clamp(2.4rem,5.4vw,4.1rem);line-height:1}
+.hero h1 small{display:block;font-size:.5em;margin:.25em 0 .1em}
+.hero h1 b{display:block;font-size:1.55em;line-height:.95}
+.hero .generes{font-family:var(--ma);color:var(--rovell);font-size:clamp(1.5rem,3vw,2.1rem);margin:14px 0 22px}
+.hero .lema{font-family:var(--serif);font-weight:600;font-size:1.5rem;color:var(--mar);margin:0}
+.hero .lema2{font-family:var(--serif);font-size:1.2rem;color:var(--rovell);margin:0 0 28px}
+.il{position:relative}
+.il img{width:100%;filter:drop-shadow(0 18px 30px rgba(22,58,95,.12))}
+.il .segell{position:absolute;left:3%;bottom:4%;width:124px;height:124px;border-radius:50%;filter:none;box-shadow:0 10px 26px rgba(0,0,0,.18)}
+.xips{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 30px}
+.xips span{font-size:.84rem;font-weight:500;padding:7px 15px;border-radius:999px;background:#fff;border:1px solid var(--sorra2);color:var(--mar)}
+.onada{display:block;width:100%;height:60px;margin-top:-1px}
 
-.llista{max-width:640px;margin:30px auto 0}
-.peca{display:flex;align-items:center;gap:14px;width:100%;background:var(--carta);border:1px solid var(--vora);border-radius:14px;padding:14px 16px;margin-bottom:10px;color:inherit;font:inherit;text-align:left;cursor:pointer;transition:border-color .15s,background .15s}
-.peca:hover{border-color:var(--or);background:#33251f}
-.peca.sona{border-color:var(--or);background:#3a2a22}
-.num{flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--fons2);border:1px solid var(--vora);color:var(--or);font-size:14px;font-variant-numeric:tabular-nums}
-.peca.sona .num{background:var(--or);border-color:var(--or);color:#231a16}
+/* ---------- L'espectacle ---------- */
+.mar-sec{background:linear-gradient(180deg,var(--cel) 0%,#eef4f8 100%)}
+.dues{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.dues p{color:#334657}
+.marc{position:relative;padding:14px;border-radius:6px;background:linear-gradient(135deg,#a27a52,#6b4a2f 50%,#8b6440);box-shadow:0 22px 44px rgba(58,38,24,.3)}
+.marc::before{content:"";position:absolute;inset:6px;border:1px solid rgba(255,235,200,.25);border-radius:3px;pointer-events:none}
+.marc img{border-radius:2px;width:100%}
+.marc figcaption{color:#f3e2c7;font-family:var(--serif);font-style:italic;font-size:1.05rem;text-align:center;padding:10px 4px 0}
+.autors{margin-top:22px;padding:16px 20px;border-left:3px solid var(--rovell);background:rgba(255,255,255,.6);border-radius:0 12px 12px 0;font-size:.95rem;color:var(--tinta)}
+.autors b{color:var(--mar)}
+
+/* ---------- Escenografia (fusta) ---------- */
+.fusta-sec{background:
+  repeating-linear-gradient(0deg,rgba(0,0,0,.18) 0 2px,transparent 2px 64px),
+  repeating-linear-gradient(90deg,rgba(255,255,255,.025) 0 1px,transparent 1px 7px),
+  linear-gradient(180deg,#4a321f,#3a2618);color:#f3e6d2}
+.fusta-sec h2{color:#f6dcaf}
+.fusta-sec .etiqueta{color:#e7a37f}
+.fusta-sec .ma{color:#e7a37f}
+.fusta-sec p{color:#e2d2bc}
+.escena{display:grid;grid-template-columns:1.3fr .7fr;gap:44px;align-items:center}
+.escena img{border-radius:14px;box-shadow:0 26px 50px rgba(0,0,0,.45);border:6px solid #2a1a0f}
+.llista-esc{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:10px}
+.llista-esc li{display:flex;gap:12px;align-items:center;font-size:.98rem;color:#efe1cc}
+.llista-esc li span{width:34px;height:34px;flex:none;border-radius:50%;background:rgba(255,255,255,.08);display:grid;place-items:center}
+
+/* ---------- Cançons ---------- */
+.cancons{background:linear-gradient(180deg,var(--mar) 0%,var(--mar3) 100%);color:#fff;position:relative}
+.cancons h2{color:#fff}
+.cancons .ma{color:var(--rovell2)}
+.cancons .etiqueta{color:var(--cel2)}
+.cancons .cap{text-align:center}
+.cancons .cap .etiqueta{justify-content:center}
+.llista{max-width:640px;margin:26px auto 0}
+.peca{display:flex;align-items:center;gap:14px;width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(169,198,222,.22);border-radius:14px;padding:14px 16px;margin-bottom:10px;color:inherit;font:inherit;text-align:left;cursor:pointer;transition:border-color .15s,background .15s}
+.peca:hover{border-color:var(--cel2);background:rgba(255,255,255,.1)}
+.peca.sona{border-color:var(--rovell2);background:rgba(217,119,79,.14)}
+.num{flex:none;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.08);border:1px solid rgba(169,198,222,.3);color:var(--cel);font-size:14px;font-variant-numeric:tabular-nums}
+.peca.sona .num{background:var(--rovell2);border-color:var(--rovell2);color:#fff}
 .info{flex:1;min-width:0}
 .titol{display:block;font-size:16px;line-height:1.3}
-.versio{display:block;font-size:12.5px;color:var(--text2);margin-top:2px}
-.durada{flex:none;font-size:13px;color:var(--text2);font-variant-numeric:tabular-nums}
+.versio{display:block;font-size:12.5px;color:var(--cel2);margin-top:2px}
+.durada{flex:none;font-size:13px;color:var(--cel2);font-variant-numeric:tabular-nums}
 .ones{display:none;gap:2px;align-items:flex-end;height:14px}
 .peca.sona .ones{display:flex}
-.ones i{width:3px;background:var(--or);border-radius:2px;animation:sal .9s ease-in-out infinite}
+.ones i{width:3px;background:var(--rovell2);border-radius:2px;animation:sal .9s ease-in-out infinite}
 .ones i:nth-child(2){animation-delay:.15s}
 .ones i:nth-child(3){animation-delay:.3s}
 @keyframes sal{0%,100%{height:4px}50%{height:14px}}
 body.pausat .ones i{animation-play-state:paused}
-.nota{text-align:center;font-size:.88rem;color:var(--text2);margin-top:18px}
+.nota{text-align:center;font-size:.86rem;color:var(--cel2);margin-top:16px}
 
-.contracta{text-align:center;background:radial-gradient(ellipse at 50% 120%,#4a2e22 0%,transparent 70%)}
-.contracta p{color:#d8cabd;max-width:32em;margin:0 auto 28px}
+/* ---------- Fitxa ---------- */
+.fitxes{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:34px}
+.fitxa{background:#fff;border:1px solid var(--sorra2);border-radius:20px;padding:26px 26px 22px;box-shadow:0 10px 26px rgba(22,58,95,.06)}
+.fitxa h3{font-family:var(--titol);font-weight:700;font-size:1.05rem;letter-spacing:.06em;color:var(--mar);display:flex;align-items:center;gap:10px;padding-bottom:10px;margin-bottom:14px;border-bottom:2px solid var(--rovell)}
+.fitxa h3 span{font-size:1.3rem}
+.fitxa ul{margin:0;padding:0 0 0 18px}
+.fitxa li{margin-bottom:6px;color:#334657}
+.fitxa li::marker{color:var(--rovell)}
+.fitxa dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 16px}
+.fitxa dt{font-weight:600;color:var(--mar)}
+.fitxa dd{margin:0;color:#334657}
+.fitxa p{color:#334657;margin:0}
+.fitxa ul.check{list-style:none;padding:0}
+.fitxa ul.check li::before{content:"✓";color:var(--rovell);font-weight:700;margin-right:10px}
+.dossier{display:flex;align-items:center;gap:22px;margin-top:26px;background:var(--mar);color:#fff;border-radius:20px;padding:18px 22px;text-decoration:none;transition:background .2s}
+.dossier:hover{background:var(--mar2)}
+.dossier img{width:64px;border-radius:4px;box-shadow:0 6px 14px rgba(0,0,0,.3)}
+.dossier b{display:block;font-family:var(--titol);letter-spacing:.04em}
+.dossier span{font-size:.9rem;color:var(--cel2)}
+.dossier .fl{margin-left:auto;font-size:1.4rem}
 
-footer{text-align:center;color:var(--text2);font-size:.86rem;padding:30px 20px}
+/* ---------- Contractació ---------- */
+.contracta{background:linear-gradient(180deg,var(--sorra) 0%,var(--cel) 100%);text-align:center}
+.contracta .etiqueta{justify-content:center}
+.contracta p{color:#334657;max-width:32em;margin:0 auto 26px}
+.contracta .botons{justify-content:center}
+
+footer{background:var(--mar3);color:var(--cel2);text-align:center;font-size:.86rem;padding:30px 20px}
 footer p{margin:4px 0}
 
-.reproductor{position:fixed;left:0;right:0;bottom:0;background:rgba(28,20,18,.97);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--vora);padding:12px 16px calc(14px + env(safe-area-inset-bottom));transform:translateY(105%);transition:transform .3s ease;z-index:10}
+/* ---------- Reproductor ---------- */
+.reproductor{position:fixed;left:0;right:0;bottom:0;background:rgba(14,39,65,.97);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid rgba(169,198,222,.25);color:#fff;padding:12px 16px calc(14px + env(safe-area-inset-bottom));transform:translateY(105%);transition:transform .3s ease;z-index:10}
 .reproductor.obert{transform:none}
 .reproductor .dins{max-width:640px;margin:0 auto}
 .ara{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:6px}
 .ara b{font-weight:500;font-size:14.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.temps{font-size:12px;color:var(--text2);font-variant-numeric:tabular-nums;flex:none}
+.temps{font-size:12px;color:var(--cel2);font-variant-numeric:tabular-nums;flex:none}
 input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:22px;background:transparent;cursor:pointer;display:block}
-input[type=range]::-webkit-slider-runnable-track{height:4px;border-radius:2px;background:var(--vora)}
-input[type=range]::-moz-range-track{height:4px;border-radius:2px;background:var(--vora)}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:15px;height:15px;border-radius:50%;background:var(--or);margin-top:-5.5px}
-input[type=range]::-moz-range-thumb{width:15px;height:15px;border:0;border-radius:50%;background:var(--or)}
+input[type=range]::-webkit-slider-runnable-track{height:4px;border-radius:2px;background:rgba(169,198,222,.3)}
+input[type=range]::-moz-range-track{height:4px;border-radius:2px;background:rgba(169,198,222,.3)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:15px;height:15px;border-radius:50%;background:var(--rovell2);margin-top:-5.5px}
+input[type=range]::-moz-range-thumb{width:15px;height:15px;border:0;border-radius:50%;background:var(--rovell2)}
 .controls{display:flex;justify-content:center;align-items:center;gap:26px;margin-top:4px}
-.controls button{background:none;border:0;color:var(--text);cursor:pointer;display:grid;place-items:center;padding:6px}
+.controls button{background:none;border:0;color:#fff;cursor:pointer;display:grid;place-items:center;padding:6px}
 .controls svg{width:24px;height:24px;fill:currentColor}
-.controls #play{width:50px;height:50px;border-radius:50%;background:var(--or);color:#231a16}
+.controls #play{width:50px;height:50px;border-radius:50%;background:var(--rovell2)}
 
-@media (max-width:760px){
+@media (max-width:860px){
+  .hero-grid,.dues,.escena{grid-template-columns:1fr;gap:36px}
+  .hero .hero-grid{padding-top:64px;padding-bottom:20px}
+  .il{max-width:480px;margin:0 auto}
+  .il .segell{width:92px;height:92px}
+  .fitxes{grid-template-columns:1fr}
+  .sec{padding:64px 0}
+}
+@media (max-width:640px){
   .wrap{padding:0 16px}
-  .dues{grid-template-columns:1fr;gap:32px}
-  .hero{padding-top:90px}
-  .sec{padding:56px 0}
+  .hero{text-align:center}
+  .ancora,.botons,.xips{justify-content:center}
+  .ancora::before,.ancora::after{width:46px}
+  .fitxa{padding:22px 18px 18px}
+  .dossier{padding:16px}
+  .dossier img{width:52px}
 }
 </style>
 </head>
@@ -112,74 +193,144 @@ input[type=range]::-moz-range-thumb{width:15px;height:15px;border:0;border-radiu
 
 <a class="torna" href="../">← Duo Suay</a>
 
+<!-- ============ PORTADA ============ -->
 <header class="hero">
-  <svg viewBox="0 0 1200 160" preserveAspectRatio="none" aria-hidden="true">
-    <g fill="none" stroke="#e0a458" stroke-width="1.2">
-      <path d="M0 90 C200 30 400 150 600 80 S1000 20 1200 90"/>
-      <path d="M0 110 C220 50 420 160 620 100 S1010 40 1200 110"/>
-      <path d="M0 70 C180 20 380 130 600 60 S980 10 1200 66"/>
-    </g>
-  </svg>
-  <div class="wrap">
-    <span class="fanal" aria-hidden="true">⚓</span>
-    <p class="gen">Concert · Havaneres, boleros, valsets i rumbes</p>
-    <h1>La Taverna de la Lola</h1>
-    <p class="duo">un espectacle del Duo Suay</p>
-    <p class="sub">Una taverna marinera on la música, la paraula i la memòria es donen la mà a partir de les històries de la gent del mar.</p>
-    <div class="xips"><span>60 minuts</span><span>Dues veus en directe</span><span>Cançons pròpies</span><span>Tots els públics</span></div>
-    <div class="botons">
-      <a class="btn btn-or" href="#cancons">Escolteu-ne les cançons ♪</a>
-      <a class="btn btn-linia" href="#contracta">Programeu-lo</a>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="ancora" aria-hidden="true"><span>⚓</span></div>
+      <h1>La Taverna <small>de la</small> <b>Lola</b></h1>
+      <p class="generes">Havaneres · Boleros · Rumbes</p>
+      <p class="lema">Dues veus. Històries de mar.</p>
+      <p class="lema2">Un viatge musical ple d'emoció i proximitat.</p>
+      <div class="xips"><span>60 minuts</span><span>Dues veus</span><span>Cançons pròpies</span><span>Equip de so propi</span></div>
+      <div class="botons">
+        <a class="btn btn-mar" href="#cancons">Escolteu-ne les cançons ♪</a>
+        <a class="btn btn-linia" href="#contracta">Programeu-lo</a>
+      </div>
+    </div>
+    <div class="il">
+      <img src="img/taverna-il.png" alt="Il·lustració: el rètol de la Taverna de la Lola penjat davant del mar, amb un fanal, una barca i una taula amb una espelma" width="545" height="540">
+      <img class="segell" src="../img/logo-rodo.png" alt="Duo Suay" width="260" height="260">
     </div>
   </div>
+  <svg class="onada" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30 C150 0 300 60 450 30 S750 0 900 30 S1100 55 1200 28 V60 H0z" fill="#dbe8f2"/></svg>
 </header>
 
-<section class="sec">
+<!-- ============ L'ESPECTACLE ============ -->
+<section class="sec mar-sec" style="padding-top:50px">
   <div class="wrap dues">
     <div>
-      <p class="etiqueta">L'espectacle</p>
-      <h2>Històries que porta la marea</h2>
-      <p>Entre cançó i cançó, la Rosa i l'Eli ens fan seure a la taverna de la Lola i ens expliquen les històries de la gent del mar: els que marxaven, els que esperaven i els que no van tornar.</p>
-      <p>Un concert càlid i de petit format, amb les harmonies de dues veus femenines i moltes cançons pròpies, escrites expressament per a l'espectacle, al costat d'havaneres i boleros de sempre.</p>
+      <p class="etiqueta">Presentació</p>
+      <h2>Una taverna marinera</h2>
+      <p class="ma">on la música, la paraula i la memòria es donen la mà</p>
+      <p>El fil conductor de la proposta se situa dins d'una taverna marinera, a partir de les històries de la gent del mar.</p>
+      <p>És una proposta de petit format i íntima, on prenen tot el protagonisme les harmonies a dues veus femenines. Cada cançó s'introdueix amb una petita presentació que evoca records i emocions, i teixeix un fil que acompanya l'espectador al llarg de tot el concert.</p>
+      <p>Un programa pensat per emocionar i fer gaudir el públic, amb havaneres, boleros, valsets i rumbes catalanes. Bona part de les cançons són pròpies, escrites expressament per a aquest espectacle, i això dona al conjunt una veu genuïna i un segell personal.</p>
+      <div class="autors">Un espectacle creat per <b>Rosa Sanahuja</b>, <b>Eli Muñoz</b> i <b>Joan Martínez</b>, tres músics amb una àmplia trajectòria en el cant coral i en el món de les havaneres.</div>
     </div>
-    <div class="fitxa">
-      <p class="etiqueta">Fitxa</p>
-      <dl>
-        <dt>Format</dt><dd>Dues veus en directe sobre bases instrumentals enregistrades</dd>
-        <dt>Durada</dt><dd>Uns 60 minuts</dd>
-        <dt>Públic</dt><dd>Tots els públics</dd>
-        <dt>Espais</dt><dd>Places, casals, vermuts musicals, festes majors, teatres</dd>
-        <dt>Intèrprets</dt><dd>Rosa Sanahuja i Eli Muñoz</dd>
-      </dl>
+    <figure class="marc" style="margin:0">
+      <img src="img/duo-escenari.jpg" alt="La Rosa i l'Eli davant de l'escenari" width="900" height="720" loading="lazy">
+      <figcaption>La Rosa i l'Eli</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ ESCENOGRAFIA ============ -->
+<section class="sec fusta-sec">
+  <div class="wrap escena">
+    <img src="img/escenografia.jpg" alt="Escenografia de la Taverna de la Lola: persianes de fusta, garlandes de llums, taules, tamborets i el rètol de la taverna" width="1280" height="853" loading="lazy">
+    <div>
+      <p class="etiqueta">L'escenari</p>
+      <h2>Entreu a la taverna</h2>
+      <p class="ma">i seieu, que comença la música</p>
+      <p>L'escenari es converteix en una taverna de port, càlida i acollidora.</p>
+      <ul class="llista-esc">
+        <li><span aria-hidden="true">🪵</span>Persianes i mobles de fusta</li>
+        <li><span aria-hidden="true">💡</span>Garlandes de llum i fanals</li>
+        <li><span aria-hidden="true">🍾</span>Taules, ampolles i el rètol de la Lola</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<section class="sec" id="cancons" style="padding-top:20px">
+<!-- ============ CANÇONS ============ -->
+<section class="sec cancons" id="cancons">
   <div class="wrap">
-    <div style="text-align:center">
+    <div class="cap">
       <p class="etiqueta">Escolteu-lo</p>
       <h2>Algunes de les cançons</h2>
+      <p class="ma">cantades per la Rosa i l'Eli</p>
     </div>
     <div class="llista" id="llista"></div>
     <p class="nota">Cançons pròpies de l'espectacle · © Tots els drets reservats</p>
   </div>
 </section>
 
+<!-- ============ FITXA ============ -->
+<section class="sec" id="fitxa">
+  <div class="wrap">
+    <p class="etiqueta">Per als programadors</p>
+    <h2>Tot el que cal saber</h2>
+    <div class="fitxes">
+      <div class="fitxa">
+        <h3><span aria-hidden="true">👥</span>A qui s'adreça</h3>
+        <ul>
+          <li>Ajuntaments: cicles musicals i culturals, festes majors, actes socials…</li>
+          <li>Sales de concerts, teatres, casals, ateneus…</li>
+          <li>Associacions i entitats culturals i socials…</li>
+          <li>Entitats privades, empreses i particulars.</li>
+        </ul>
+      </div>
+      <div class="fitxa">
+        <h3><span aria-hidden="true">🎤</span>Fitxa artística</h3>
+        <dl>
+          <dt>Títol</dt><dd>La Taverna de la Lola</dd>
+          <dt>Gènere</dt><dd>Havaneres, boleros, rumbes, valsets</dd>
+          <dt>Format</dt><dd>Dues veus solistes sobre bases instrumentals enregistrades</dd>
+          <dt>Durada</dt><dd>60 minuts</dd>
+        </dl>
+      </div>
+      <div class="fitxa">
+        <h3><span aria-hidden="true">🔊</span>Fitxa tècnica</h3>
+        <p>Equip propi de so disponible per a espais de fins a 150 persones.</p>
+        <h3 style="margin-top:22px"><span aria-hidden="true">🤝</span>Condicions</h3>
+        <p>Caixet i disponibilitat de dates a concretar.</p>
+      </div>
+      <div class="fitxa">
+        <h3><span aria-hidden="true">⭐</span>Per què contractar-nos?</h3>
+        <ul class="check">
+          <li>Espectacle càlid i proper</li>
+          <li>Repertori variat i emocional</li>
+          <li>Dues veus que connecten</li>
+          <li>Ideal per a espais petits</li>
+          <li>Professionalitat i experiència</li>
+        </ul>
+      </div>
+    </div>
+    <a class="dossier" href="img/dossier-taverna.jpg" download="La Taverna de la Lola - Dossier.jpg">
+      <img src="img/dossier-taverna.jpg" alt="" width="1054" height="1492" loading="lazy">
+      <div><b>Dossier de l'espectacle</b><span>Descarregueu-lo i compartiu-lo</span></div>
+      <span class="fl" aria-hidden="true">↓</span>
+    </a>
+  </div>
+</section>
+
+<!-- ============ CONTRACTACIÓ ============ -->
 <section class="sec contracta" id="contracta">
   <div class="wrap">
     <p class="etiqueta">Contractació</p>
     <h2>Porteu la taverna al vostre poble</h2>
+    <p class="ma">i deixeu que soni el mar</p>
     <p>Ajuntaments, entitats i festes majors: expliqueu-nos la data i el lloc, i us enviarem la proposta.</p>
     <div class="botons">
-      <a class="btn btn-or" href="mailto:duosuay@gmail.com?subject=La%20Taverna%20de%20la%20Lola">duosuay@gmail.com</a>
+      <a class="btn btn-mar" href="mailto:duosuay@gmail.com?subject=La%20Taverna%20de%20la%20Lola">duosuay@gmail.com</a>
       <a class="btn btn-linia" href="tel:+34666607600">666 607 600 (Eli)</a>
     </div>
   </div>
 </section>
 
 <footer>
-  <p><a href="../">duosuay.github.io</a></p>
+  <p><a href="../">Duo Suay</a></p>
   <p>© 2026 DUO SUAY · Tots els drets reservats</p>
 </footer>
 
@@ -237,6 +388,7 @@ function posa(i){
   peces.forEach((p,j) => p.classList.toggle('sona', j === i));
   document.getElementById('araTitol').textContent = CANCONS[i].t;
   reproductor.classList.add('obert');
+  document.body.classList.add('escoltant');
   if ('mediaSession' in navigator){
     navigator.mediaSession.metadata = new MediaMetadata({title: CANCONS[i].t, artist: "Duo Suay", album: "La Taverna de la Lola"});
   }
