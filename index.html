@@ -10,7 +10,7 @@
 <meta property="og:title" content="Duo Suay · Música per a moments que perduren">
 <meta property="og:description" content="Dues veus, una mateixa essència. Bodes, esdeveniments i espectacles musicals.">
 <meta property="og:url" content="https://duosuay.github.io/">
-<meta property="og:image" content="https://duosuay.github.io/img/duo-cantant.jpg">
+<meta property="og:image" content="https://duosuay.github.io/img/foto-1.jpg">
 <link rel="canonical" href="https://duosuay.github.io/">
 <link rel="icon" href="img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +27,7 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--paper);color:var(--tinta);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-img,video{display:block;max-width:100%}
+img,video{display:block;max-width:100%;height:auto}
 a{color:inherit}
 .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
 h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1;margin:0}
@@ -63,7 +63,7 @@ h2 em{font-style:italic;color:var(--ocre3)}
 .hero .sub strong{color:#fff;font-weight:600}
 .botons{display:flex;flex-wrap:wrap;gap:12px}
 .foto{position:relative;justify-self:center;width:min(380px,86vw)}
-.foto img{width:100%;aspect-ratio:608/860;object-fit:cover;border-radius:200px 200px 18px 18px;box-shadow:0 30px 70px rgba(0,0,0,.5)}
+.foto img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;border-radius:200px 200px 18px 18px;box-shadow:0 30px 70px rgba(0,0,0,.5)}
 .foto::before{content:"";position:absolute;inset:-14px;border:1px solid rgba(207,159,88,.45);border-radius:214px 214px 26px 26px;pointer-events:none}
 .foto .peu{position:absolute;left:50%;bottom:-18px;transform:translateX(-50%);background:var(--ocre);color:#2a1a06;font-size:.82rem;font-weight:600;padding:8px 18px;border-radius:999px;white-space:nowrap;box-shadow:0 8px 20px rgba(0,0,0,.3)}
 
@@ -78,6 +78,11 @@ h2 em{font-style:italic;color:var(--ocre3)}
 .tres b{display:block;font-family:var(--serif);font-size:1.45rem;font-weight:600;line-height:1.1}
 .tres span{font-size:.92rem;color:var(--tinta2)}
 .tres .fl{color:var(--ocre3);font-size:1.3rem}
+.nosaltres strong{color:var(--tinta);font-weight:600}
+.so{display:flex;gap:14px;align-items:flex-start;background:var(--blanc);border:1px solid var(--vora);border-radius:16px;padding:16px 18px;margin-top:22px!important}
+.so>span:first-child{font-size:1.4rem;line-height:1.2}
+.galeria{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:56px}
+.galeria img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 35%;border-radius:16px;box-shadow:0 14px 30px rgba(40,25,10,.14)}
 
 /* Espectacles */
 .espectacles{background:var(--fosc);color:#efe5d8}
@@ -197,6 +202,7 @@ footer p{margin:4px 0}
   .foto{width:min(300px,78vw)}
   .cartes{grid-template-columns:1fr}
   .moments{grid-template-columns:1fr 1fr}
+  .galeria{grid-template-columns:1fr 1fr;gap:12px;margin-top:40px}
   .sec{padding:72px 0}
 }
 @media (max-width:640px){
@@ -250,7 +256,7 @@ footer p{margin:4px 0}
       </div>
     </div>
     <div class="foto">
-      <img src="img/duo-cantant.jpg" alt="La Rosa i l'Eli cantant en directe" width="608" height="860">
+      <img src="img/foto-1.jpg" alt="La Rosa i l'Eli davant d'un mur de pedra" width="1094" height="1400">
       <span class="peu">Rosa Sanahuja · Eli Muñoz</span>
     </div>
   </div>
@@ -262,15 +268,23 @@ footer p{margin:4px 0}
     <div class="revela">
       <p class="etiqueta">Nosaltres</p>
       <h2>Dues veus, <em>una mateixa essència</em></h2>
-      <p class="cita">Naixem del diàleg entre dues veus que s'escolten.</p>
-      <p>Som un duet vocal que neix de la complicitat de tota una vida cantant juntes. Busquem l'equilibri, la calidesa i la naturalitat en cada interpretació, sempre amb les dues veus en directe.</p>
-      <p>Cantem música moderna per acompanyar els vostres moments més especials, i creem espectacles musicals propis, amb cançons escrites expressament per a cada història.</p>
+      <p class="cita">Som la Rosa i l'Eli, un duet vocal de Tarragona que neix de la complicitat de tota una vida cantant juntes.</p>
+      <p>Dues veus que s'escolten i busquen l'equilibri, la calidesa i la naturalitat en cada interpretació.</p>
+      <p>Ens especialitzem en <strong>música moderna</strong> per acompanyar els vostres moments més especials.</p>
+      <p class="so"><span aria-hidden="true">🔊</span><span>Disposem d'<strong>equip de so propi</strong> per a formats petits, perquè no us hàgiu de preocupar de res, només de gaudir de la música.</span></p>
     </div>
     <div class="tres revela">
-      <a href="#espectacles"><span class="ic" aria-hidden="true">🎭</span><span><b>Espectacles</b><span>Teatre musical i concerts amb cançons pròpies</span></span><span class="fl" aria-hidden="true">→</span></a>
+      <a href="taverna/"><span class="ic" aria-hidden="true">⚓</span><span><b>La Taverna de la Lola</b><span>Havaneres, boleros i rumbes amb històries de mar</span></span><span class="fl" aria-hidden="true">→</span></a>
       <a href="#bodes"><span class="ic" aria-hidden="true">💍</span><span><b>Bodes</b><span>Cerimònies amb la banda sonora que somieu</span></span><span class="fl" aria-hidden="true">→</span></a>
       <a href="#esdeveniments"><span class="ic" aria-hidden="true">🥂</span><span><b>Esdeveniments</b><span>Celebracions familiars, empreses i homenatges</span></span><span class="fl" aria-hidden="true">→</span></a>
+      <a href="#espectacles"><span class="ic" aria-hidden="true">🎭</span><span><b>Altres espectacles</b><span>El Nadal [manual d'ús] i més històries cantades</span></span><span class="fl" aria-hidden="true">→</span></a>
     </div>
+  </div>
+  <div class="wrap galeria">
+    <img class="revela" src="img/foto-1.jpg" alt="La Rosa i l'Eli davant d'un mur de pedra" width="1094" height="1400" loading="lazy">
+    <img class="revela" src="img/foto-2.jpg" alt="La Rosa i l'Eli en un camí entre arbres" width="936" height="1400" loading="lazy">
+    <img class="revela" src="img/foto-3.jpg" alt="La Rosa i l'Eli al costat d'una font amb un cap de lleó" width="742" height="900" loading="lazy">
+    <img class="revela" src="img/foto-4.jpg" alt="La Rosa i l'Eli davant d'una porta de fusta" width="1400" height="1400" loading="lazy">
   </div>
 </section>
 
