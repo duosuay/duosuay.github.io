@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>La Taverna de la Lola · Duo Suay</title>
+<meta name="description" content="Concert del Duo Suay: havaneres, boleros, valsets i rumbes en una taverna marinera. Dues veus en directe i cançons pròpies. 60 minuts.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#171110">
+<meta property="og:title" content="La Taverna de la Lola · Duo Suay">
+<meta property="og:description" content="Havaneres, boleros, valsets i rumbes amb les històries de la gent del mar.">
+<meta property="og:url" content="https://duosuay.github.io/taverna/">
+<meta property="og:image" content="https://duosuay.github.io/img/duo-cantant.jpg">
+<link rel="canonical" href="https://duosuay.github.io/taverna/">
+<link rel="icon" href="../img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --fons:#171110; --fons2:#211917; --carta:#2b201d; --vora:#3d2e2a;
+  --or:#e0a458; --or2:#f2c98a;
+  --text:#f4ebe2; --text2:#b3a294;
+  --serif:'Cormorant Garamond',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--fons);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;padding-bottom:140px}
+a{color:inherit}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1;margin:0}
+h2{font-size:clamp(1.9rem,4vw,2.6rem);margin-bottom:14px;color:var(--or2)}
+.etiqueta{font-size:.76rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--or);margin:0 0 12px}
+.sec{padding:72px 0}
+
+.torna{position:absolute;top:20px;left:20px;z-index:3;font-size:.9rem;color:var(--text2);text-decoration:none;display:inline-flex;gap:8px;align-items:center}
+.torna:hover{color:var(--or2)}
+
+.hero{position:relative;text-align:center;padding:110px 0 80px;background:radial-gradient(ellipse at 50% -10%,#4a2e22 0%,transparent 65%);overflow:hidden}
+.hero svg{position:absolute;left:0;right:0;bottom:10px;width:100%;height:160px;opacity:.25;pointer-events:none}
+.fanal{font-size:3rem;line-height:1;display:block;margin-bottom:16px}
+.hero .gen{font-size:.8rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--text2);margin:0 0 14px}
+.hero h1{font-size:clamp(2.8rem,8vw,5rem);color:var(--or2);font-weight:700}
+.hero .duo{font-family:var(--serif);font-style:italic;font-size:1.4rem;color:var(--text2);margin:10px 0 28px}
+.hero .sub{max-width:34em;margin:0 auto 32px;color:#d8cabd;font-size:1.08rem}
+.xips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:34px}
+.xips span{font-size:.85rem;padding:7px 16px;border-radius:999px;border:1px solid var(--vora);background:var(--fons2)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.98rem;text-decoration:none;border-radius:999px;padding:14px 26px;border:0;cursor:pointer;font-family:var(--sans);transition:transform .2s,background .2s}
+.btn-or{background:var(--or);color:#2b1a0c}
+.btn-or:hover{background:var(--or2);transform:translateY(-2px)}
+.btn-linia{color:var(--text);box-shadow:inset 0 0 0 1.5px var(--vora)}
+.btn-linia:hover{box-shadow:inset 0 0 0 1.5px var(--or)}
+.botons{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+
+.dues{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.dues p{color:#d8cabd;margin:0 0 14px}
+.fitxa{background:var(--carta);border:1px solid var(--vora);border-radius:20px;padding:26px 26px 18px}
+.fitxa dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:10px 18px;font-size:.95rem}
+.fitxa dt{color:var(--text2)}
+.fitxa dd{margin:0}
+
+.llista{max-width:640px;margin:30px auto 0}
+.peca{display:flex;align-items:center;gap:14px;width:100%;background:var(--carta);border:1px solid var(--vora);border-radius:14px;padding:14px 16px;margin-bottom:10px;color:inherit;font:inherit;text-align:left;cursor:pointer;transition:border-color .15s,background .15s}
+.peca:hover{border-color:var(--or);background:#33251f}
+.peca.sona{border-color:var(--or);background:#3a2a22}
+.num{flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--fons2);border:1px solid var(--vora);color:var(--or);font-size:14px;font-variant-numeric:tabular-nums}
+.peca.sona .num{background:var(--or);border-color:var(--or);color:#231a16}
+.info{flex:1;min-width:0}
+.titol{display:block;font-size:16px;line-height:1.3}
+.versio{display:block;font-size:12.5px;color:var(--text2);margin-top:2px}
+.durada{flex:none;font-size:13px;color:var(--text2);font-variant-numeric:tabular-nums}
+.ones{display:none;gap:2px;align-items:flex-end;height:14px}
+.peca.sona .ones{display:flex}
+.ones i{width:3px;background:var(--or);border-radius:2px;animation:sal .9s ease-in-out infinite}
+.ones i:nth-child(2){animation-delay:.15s}
+.ones i:nth-child(3){animation-delay:.3s}
+@keyframes sal{0%,100%{height:4px}50%{height:14px}}
+body.pausat .ones i{animation-play-state:paused}
+.nota{text-align:center;font-size:.88rem;color:var(--text2);margin-top:18px}
+
+.contracta{text-align:center;background:radial-gradient(ellipse at 50% 120%,#4a2e22 0%,transparent 70%)}
+.contracta p{color:#d8cabd;max-width:32em;margin:0 auto 28px}
+
+footer{text-align:center;color:var(--text2);font-size:.86rem;padding:30px 20px}
+footer p{margin:4px 0}
+
+.reproductor{position:fixed;left:0;right:0;bottom:0;background:rgba(28,20,18,.97);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--vora);padding:12px 16px calc(14px + env(safe-area-inset-bottom));transform:translateY(105%);transition:transform .3s ease;z-index:10}
+.reproductor.obert{transform:none}
+.reproductor .dins{max-width:640px;margin:0 auto}
+.ara{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:6px}
+.ara b{font-weight:500;font-size:14.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.temps{font-size:12px;color:var(--text2);font-variant-numeric:tabular-nums;flex:none}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:22px;background:transparent;cursor:pointer;display:block}
+input[type=range]::-webkit-slider-runnable-track{height:4px;border-radius:2px;background:var(--vora)}
+input[type=range]::-moz-range-track{height:4px;border-radius:2px;background:var(--vora)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:15px;height:15px;border-radius:50%;background:var(--or);margin-top:-5.5px}
+input[type=range]::-moz-range-thumb{width:15px;height:15px;border:0;border-radius:50%;background:var(--or)}
+.controls{display:flex;justify-content:center;align-items:center;gap:26px;margin-top:4px}
+.controls button{background:none;border:0;color:var(--text);cursor:pointer;display:grid;place-items:center;padding:6px}
+.controls svg{width:24px;height:24px;fill:currentColor}
+.controls #play{width:50px;height:50px;border-radius:50%;background:var(--or);color:#231a16}
+
+@media (max-width:760px){
+  .wrap{padding:0 16px}
+  .dues{grid-template-columns:1fr;gap:32px}
+  .hero{padding-top:90px}
+  .sec{padding:56px 0}
+}
+</style>
+</head>
+<body>
+
+<a class="torna" href="../">← Duo Suay</a>
+
+<header class="hero">
+  <svg viewBox="0 0 1200 160" preserveAspectRatio="none" aria-hidden="true">
+    <g fill="none" stroke="#e0a458" stroke-width="1.2">
+      <path d="M0 90 C200 30 400 150 600 80 S1000 20 1200 90"/>
+      <path d="M0 110 C220 50 420 160 620 100 S1010 40 1200 110"/>
+      <path d="M0 70 C180 20 380 130 600 60 S980 10 1200 66"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <span class="fanal" aria-hidden="true">⚓</span>
+    <p class="gen">Concert · Havaneres, boleros, valsets i rumbes</p>
+    <h1>La Taverna de la Lola</h1>
+    <p class="duo">un espectacle del Duo Suay</p>
+    <p class="sub">Una taverna marinera on la música, la paraula i la memòria es donen la mà a partir de les històries de la gent del mar.</p>
+    <div class="xips"><span>60 minuts</span><span>Dues veus en directe</span><span>Cançons pròpies</span><span>Tots els públics</span></div>
+    <div class="botons">
+      <a class="btn btn-or" href="#cancons">Escolteu-ne les cançons ♪</a>
+      <a class="btn btn-linia" href="#contracta">Programeu-lo</a>
+    </div>
+  </div>
+</header>
+
+<section class="sec">
+  <div class="wrap dues">
+    <div>
+      <p class="etiqueta">L'espectacle</p>
+      <h2>Històries que porta la marea</h2>
+      <p>Entre cançó i cançó, la Rosa i l'Eli ens fan seure a la taverna de la Lola i ens expliquen les històries de la gent del mar: els que marxaven, els que esperaven i els que no van tornar.</p>
+      <p>Un concert càlid i de petit format, amb les harmonies de dues veus femenines i moltes cançons pròpies, escrites expressament per a l'espectacle, al costat d'havaneres i boleros de sempre.</p>
+    </div>
+    <div class="fitxa">
+      <p class="etiqueta">Fitxa</p>
+      <dl>
+        <dt>Format</dt><dd>Dues veus en directe sobre bases instrumentals enregistrades</dd>
+        <dt>Durada</dt><dd>Uns 60 minuts</dd>
+        <dt>Públic</dt><dd>Tots els públics</dd>
+        <dt>Espais</dt><dd>Places, casals, vermuts musicals, festes majors, teatres</dd>
+        <dt>Intèrprets</dt><dd>Rosa Sanahuja i Eli Muñoz</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="cancons" style="padding-top:20px">
+  <div class="wrap">
+    <div style="text-align:center">
+      <p class="etiqueta">Escolteu-lo</p>
+      <h2>Algunes de les cançons</h2>
+    </div>
+    <div class="llista" id="llista"></div>
+    <p class="nota">Cançons pròpies de l'espectacle · © Tots els drets reservats</p>
+  </div>
+</section>
+
+<section class="sec contracta" id="contracta">
+  <div class="wrap">
+    <p class="etiqueta">Contractació</p>
+    <h2>Porteu la taverna al vostre poble</h2>
+    <p>Ajuntaments, entitats i festes majors: expliqueu-nos la data i el lloc, i us enviarem la proposta.</p>
+    <div class="botons">
+      <a class="btn btn-or" href="mailto:duosuay@gmail.com?subject=La%20Taverna%20de%20la%20Lola">duosuay@gmail.com</a>
+      <a class="btn btn-linia" href="tel:+34666607600">666 607 600 (Eli)</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><a href="../">duosuay.github.io</a></p>
+  <p>© 2026 DUO SUAY · Tots els drets reservats</p>
+</footer>
+
+<div class="reproductor" id="reproductor">
+  <div class="dins">
+    <div class="ara"><b id="araTitol"></b><span class="temps"><span id="ara">0:00</span> / <span id="fi">0:00</span></span></div>
+    <input type="range" id="barra" min="0" max="1000" value="0" aria-label="Posició">
+    <div class="controls">
+      <button id="anterior" type="button" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M6 5h2v14H6zm3.5 7L19 5v14z"/></svg></button>
+      <button id="play" type="button" aria-label="Reprodueix o pausa"><svg viewBox="0 0 24 24"><path id="icona" d="M7 5v14l12-7z"/></svg></button>
+      <button id="seguent" type="button" aria-label="Següent"><svg viewBox="0 0 24 24"><path d="M16 5h2v14h-2zM5 5l9.5 7L5 19z"/></svg></button>
+    </div>
+  </div>
+</div>
+<audio id="so" preload="none"></audio>
+
+<script>
+const CANCONS = [
+  {t:"Agafa fort el timó", f:"audio/05-agafa-fort-el-timo.mp3", d:207},
+  {t:"Sento amb tu",       f:"audio/08-sento-amb-tu.mp3",       d:186},
+  {t:"Vela blanca",        f:"audio/10-vela-blanca.mp3",        d:210},
+  {t:"El vers final",      f:"audio/11-el-vers-final.mp3",      d:166},
+  {t:"Dona'm llum",        f:"audio/12-donam-llum.mp3",         d:190}
+];
+
+const so = document.getElementById('so');
+const llista = document.getElementById('llista');
+const reproductor = document.getElementById('reproductor');
+const barra = document.getElementById('barra');
+const icona = document.getElementById('icona');
+const PLAY  = "M7 5v14l12-7z";
+const PAUSA = "M7 5h3.5v14H7zm6.5 0H17v14h-3.5z";
+let actual = -1;
+
+const rellotge = s => (!isFinite(s) || s < 0) ? "0:00"
+  : Math.floor(s/60) + ":" + String(Math.floor(s%60)).padStart(2,'0');
+
+CANCONS.forEach((c,i) => {
+  const b = document.createElement('button');
+  b.type = 'button';
+  b.className = 'peca';
+  b.innerHTML = `<span class="num">${i+1}</span>
+    <span class="info"><span class="titol">${c.t}</span><span class="versio">Duo Suay</span></span>
+    <span class="ones"><i></i><i></i><i></i></span>
+    <span class="durada">${rellotge(c.d)}</span>`;
+  b.onclick = () => (i === actual) ? alterna() : posa(i);
+  llista.appendChild(b);
+});
+const peces = [...document.querySelectorAll('.peca')];
+
+function posa(i){
+  actual = i;
+  so.src = CANCONS[i].f;
+  so.play();
+  peces.forEach((p,j) => p.classList.toggle('sona', j === i));
+  document.getElementById('araTitol').textContent = CANCONS[i].t;
+  reproductor.classList.add('obert');
+  if ('mediaSession' in navigator){
+    navigator.mediaSession.metadata = new MediaMetadata({title: CANCONS[i].t, artist: "Duo Suay", album: "La Taverna de la Lola"});
+  }
+}
+
+const alterna = () => so.paused ? so.play() : so.pause();
+const salta = d => posa((actual + d + CANCONS.length) % CANCONS.length);
+
+document.getElementById('play').onclick     = alterna;
+document.getElementById('seguent').onclick  = () => salta(1);
+document.getElementById('anterior').onclick = () => so.currentTime > 3 ? so.currentTime = 0 : salta(-1);
+
+so.onplay  = () => { icona.setAttribute('d', PAUSA); document.body.classList.remove('pausat'); };
+so.onpause = () => { icona.setAttribute('d', PLAY);  document.body.classList.add('pausat'); };
+so.onended = () => salta(1);
+
+let arrossegant = false;
+so.ontimeupdate = () => {
+  if (!so.duration) return;
+  if (!arrossegant) barra.value = so.currentTime / so.duration * 1000;
+  document.getElementById('ara').textContent = rellotge(so.currentTime);
+};
+so.onloadedmetadata = () => document.getElementById('fi').textContent = rellotge(so.duration);
+barra.oninput  = () => { arrossegant = true;  document.getElementById('ara').textContent = rellotge(barra.value/1000*so.duration); };
+barra.onchange = () => { arrossegant = false; if (so.duration) so.currentTime = barra.value/1000*so.duration; };
+
+if ('mediaSession' in navigator){
+  navigator.mediaSession.setActionHandler('play',          () => so.play());
+  navigator.mediaSession.setActionHandler('pause',         () => so.pause());
+  navigator.mediaSession.setActionHandler('nexttrack',     () => salta(1));
+  navigator.mediaSession.setActionHandler('previoustrack', () => salta(-1));
+}
+</script>
+</body>
+</html>

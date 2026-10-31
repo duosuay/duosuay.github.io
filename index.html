@@ -3,11 +3,527 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Duo Suay</title>
+<title>Duo Suay · Música per a moments que perduren</title>
+<meta name="description" content="La Rosa i l'Eli, duet vocal de Tarragona. Música en directe per a bodes, esdeveniments i espectacles musicals propis.">
 <meta name="robots" content="noindex, nofollow">
-<meta http-equiv="refresh" content="0; url=nadal/">
-<link rel="canonical" href="https://duosuay.github.io/nadal/">
-<style>body{margin:0;background:#0d2a22;color:#f3d58c;font:17px system-ui,sans-serif;display:grid;place-items:center;min-height:100vh}a{color:inherit}</style>
+<meta name="theme-color" content="#1e1814">
+<meta property="og:title" content="Duo Suay · Música per a moments que perduren">
+<meta property="og:description" content="Dues veus, una mateixa essència. Bodes, esdeveniments i espectacles musicals.">
+<meta property="og:url" content="https://duosuay.github.io/">
+<meta property="og:image" content="https://duosuay.github.io/img/duo-cantant.jpg">
+<link rel="canonical" href="https://duosuay.github.io/">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --fosc:#1e1814; --fosc2:#2a221c;
+  --ocre:#cf9f58; --ocre2:#e9c88f; --ocre3:#a97a35;
+  --paper:#f8f3eb; --paper2:#efe6d8; --blanc:#fffdf9;
+  --tinta:#2b2420; --tinta2:#6e6157; --vora:#e2d6c4;
+  --serif:'Cormorant Garamond',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--tinta);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1;margin:0}
+h2{font-size:clamp(2.1rem,4.6vw,3.2rem);margin-bottom:16px}
+h2 em{font-style:italic;color:var(--ocre3)}
+.etiqueta{font-size:.78rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ocre3);margin:0 0 14px;display:flex;align-items:center;gap:12px}
+.etiqueta::before{content:"";width:28px;height:1px;background:currentColor}
+.lead{font-size:1.1rem;color:var(--tinta2);max-width:38em;margin:0}
+.sec{padding:96px 0}
+
+/* Botons */
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.98rem;text-decoration:none;border-radius:999px;padding:14px 26px;border:0;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s,color .2s;font-family:var(--sans)}
+.btn-ocre{background:var(--ocre);color:#2a1a06;box-shadow:0 8px 22px rgba(207,159,88,.3)}
+.btn-ocre:hover{background:var(--ocre2);transform:translateY(-2px)}
+.btn-linia{background:transparent;color:inherit;box-shadow:inset 0 0 0 1.5px currentColor}
+.btn-linia:hover{background:rgba(207,159,88,.15)}
+
+/* Menú */
+.menu{position:absolute;top:0;left:0;right:0;z-index:5}
+.menu .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:20px;padding-bottom:20px}
+.menu .marca{font-family:var(--serif);font-size:1.5rem;font-weight:600;color:var(--ocre2);text-decoration:none;letter-spacing:.04em}
+.menu ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+.menu ul a{color:#e8ddd0;text-decoration:none;font-size:.9rem;font-weight:500;letter-spacing:.03em}
+.menu ul a:hover{color:var(--ocre2)}
+
+/* Portada */
+.hero{position:relative;background:radial-gradient(ellipse at 80% 10%,#3a2c20 0%,var(--fosc) 60%);color:#f3ebe1;overflow:hidden}
+.hero svg.ones{position:absolute;left:0;right:0;bottom:70px;width:100%;height:220px;opacity:.22;pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;padding-top:120px;padding-bottom:110px;position:relative}
+.hero .logo{width:min(340px,70vw);height:auto;margin:0 0 6px -10px}
+.hero h1{font-size:clamp(2rem,4.2vw,3rem);font-style:italic;font-weight:500;color:#fff;margin-bottom:20px}
+.hero .sub{font-size:1.1rem;color:#cdbfb0;max-width:31em;margin:0 0 32px}
+.hero .sub strong{color:#fff;font-weight:600}
+.botons{display:flex;flex-wrap:wrap;gap:12px}
+.foto{position:relative;justify-self:center;width:min(380px,86vw)}
+.foto img{width:100%;aspect-ratio:608/860;object-fit:cover;border-radius:200px 200px 18px 18px;box-shadow:0 30px 70px rgba(0,0,0,.5)}
+.foto::before{content:"";position:absolute;inset:-14px;border:1px solid rgba(207,159,88,.45);border-radius:214px 214px 26px 26px;pointer-events:none}
+.foto .peu{position:absolute;left:50%;bottom:-18px;transform:translateX(-50%);background:var(--ocre);color:#2a1a06;font-size:.82rem;font-weight:600;padding:8px 18px;border-radius:999px;white-space:nowrap;box-shadow:0 8px 20px rgba(0,0,0,.3)}
+
+/* Nosaltres */
+.nosaltres-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.cita{font-family:var(--serif);font-size:clamp(1.5rem,2.6vw,1.95rem);font-style:italic;line-height:1.35;color:var(--tinta);margin:0 0 22px;padding-left:22px;border-left:2px solid var(--ocre)}
+.nosaltres p{color:var(--tinta2);margin:0 0 16px}
+.tres{display:grid;gap:14px}
+.tres a{display:grid;grid-template-columns:54px 1fr auto;gap:16px;align-items:center;background:var(--blanc);border:1px solid var(--vora);border-radius:18px;padding:18px 20px;text-decoration:none;transition:border-color .2s,transform .2s}
+.tres a:hover{border-color:var(--ocre);transform:translateX(4px)}
+.tres .ic{width:54px;height:54px;border-radius:50%;background:var(--paper2);display:grid;place-items:center;font-size:1.5rem}
+.tres b{display:block;font-family:var(--serif);font-size:1.45rem;font-weight:600;line-height:1.1}
+.tres span{font-size:.92rem;color:var(--tinta2)}
+.tres .fl{color:var(--ocre3);font-size:1.3rem}
+
+/* Espectacles */
+.espectacles{background:var(--fosc);color:#efe5d8}
+.espectacles h2 em{color:var(--ocre2)}
+.espectacles .etiqueta{color:var(--ocre)}
+.espectacles .lead{color:#b9aa9a}
+.cartes{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:44px}
+.esp{position:relative;border-radius:22px;padding:30px 28px 28px;overflow:hidden;display:flex;flex-direction:column;min-height:330px;border:1px solid rgba(255,255,255,.08);transition:transform .25s}
+.esp:hover{transform:translateY(-4px)}
+.esp .gen{font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;opacity:.75;margin:0 0 10px}
+.esp h3{font-size:2.1rem;margin-bottom:12px}
+.esp p{margin:0 0 18px;font-size:.98rem;color:rgba(255,255,255,.78)}
+.esp .xips{display:flex;flex-wrap:wrap;gap:8px;margin:auto 0 20px}
+.esp .xips span{font-size:.78rem;padding:5px 12px;border-radius:999px;background:rgba(255,255,255,.1)}
+.esp .btn{align-self:flex-start;padding:12px 22px;font-size:.92rem}
+.esp .estat{align-self:flex-start;margin-bottom:14px;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 11px;border-radius:999px;background:var(--ocre);color:#2a1a06}
+.esp .marca{position:absolute;right:-14px;bottom:-24px;font-size:9rem;opacity:.07;line-height:1;pointer-events:none}
+.e-nadal{background:radial-gradient(ellipse at 70% 0%,#1f5a45 0%,#0d2a22 70%)}
+.e-nadal h3{color:#f3d58c}
+.e-nadal .btn{background:#d9a84e;color:#3a2408}
+.e-taverna{background:radial-gradient(ellipse at 50% -10%,#4a2e22 0%,#171110 75%)}
+.e-taverna h3{color:#f2c98a}
+.e-taverna .btn{background:#e0a458;color:#2b1a0c}
+.e-mantell{background:radial-gradient(1.5px 1.5px at 20% 30%,#fff8 50%,transparent 51%),radial-gradient(1px 1px at 70% 18%,#fff9 50%,transparent 51%),radial-gradient(1.5px 1.5px at 85% 60%,#fff6 50%,transparent 51%),radial-gradient(1px 1px at 40% 75%,#fff7 50%,transparent 51%),radial-gradient(ellipse at 50% -10%,#2b3f7a 0%,#0e1430 75%)}
+.e-mantell h3{color:#f3d58c}
+.e-celler{background:radial-gradient(ellipse at 30% -10%,#6b2a3a 0%,#2a0f17 75%)}
+.e-celler h3{color:#f3d9a8}
+.e-mantell .btn,.e-celler .btn{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.45)}
+.e-mantell .btn:hover,.e-celler .btn:hover{box-shadow:inset 0 0 0 1.5px #fff}
+
+/* Bodes */
+.bodes-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.passos{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:22px}
+.passos li{display:grid;grid-template-columns:44px 1fr;gap:16px}
+.passos .n{width:44px;height:44px;border-radius:50%;border:1px solid var(--ocre);color:var(--ocre3);display:grid;place-items:center;font-family:var(--serif);font-size:1.3rem;font-weight:600}
+.passos b{display:block;font-family:var(--serif);font-size:1.4rem;font-weight:600;line-height:1.2;margin-bottom:2px}
+.passos p{margin:0;color:var(--tinta2);font-size:.97rem}
+.repertori{background:var(--blanc);border:1px solid var(--vora);border-radius:22px;padding:30px 30px 26px}
+.repertori h3{font-size:1.7rem;margin-bottom:4px}
+.repertori .petit{font-size:.9rem;color:var(--tinta2);margin:0 0 18px}
+.repertori ul{list-style:none;margin:0;padding:0;columns:2;column-gap:28px}
+.repertori li{break-inside:avoid;padding:7px 0;border-bottom:1px dashed var(--vora);font-size:.93rem;line-height:1.35}
+.repertori li b{display:block;font-weight:600}
+.repertori li span{color:var(--tinta2);font-size:.84rem}
+.repertori .nota{margin:18px 0 0;font-size:.92rem;color:var(--tinta2)}
+
+/* Escolteu-nos */
+.escolta{background:var(--paper2)}
+.videos{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.video{margin:0}
+.video .marc{position:relative;border-radius:18px;overflow:hidden;background:#000;aspect-ratio:9/16;box-shadow:0 18px 40px rgba(40,25,10,.18)}
+.video video{width:100%;height:100%;object-fit:cover}
+.video .play{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.45));border:0;cursor:pointer;padding:0}
+.video .play span{width:68px;height:68px;border-radius:50%;background:rgba(255,253,249,.92);display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.3);transition:transform .2s}
+.video .play:hover span{transform:scale(1.08)}
+.video .play svg{width:26px;height:26px;margin-left:4px;fill:var(--fosc)}
+.video figcaption{margin-top:12px;font-family:var(--serif);font-size:1.3rem;font-weight:600;text-align:center}
+.video figcaption small{display:block;font-family:var(--sans);font-size:.8rem;font-weight:400;color:var(--tinta2)}
+.pistes{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
+.pista{display:flex;align-items:center;gap:14px;width:100%;background:var(--blanc);border:1px solid var(--vora);border-radius:16px;padding:14px 18px;cursor:pointer;font:inherit;color:inherit;text-align:left;transition:border-color .2s}
+.pista:hover,.pista.sona{border-color:var(--ocre)}
+.pista .bt{flex:none;width:42px;height:42px;border-radius:50%;background:var(--ocre);display:grid;place-items:center}
+.pista .bt svg{width:16px;height:16px;fill:#2a1a06}
+.pista .tx{flex:1;min-width:0}
+.pista b{display:block;font-weight:600;font-size:.98rem}
+.pista span{font-size:.84rem;color:var(--tinta2)}
+.pista .barra{height:3px;border-radius:2px;background:var(--vora);margin-top:8px;overflow:hidden}
+.pista .barra i{display:block;height:100%;width:0;background:var(--ocre)}
+.pista .dur{flex:none;font-size:.84rem;color:var(--tinta2);font-variant-numeric:tabular-nums}
+
+/* Esdeveniments */
+.moments{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+.moment{background:var(--blanc);border:1px solid var(--vora);border-radius:20px;padding:26px 22px}
+.moment .ic{font-size:1.8rem;margin-bottom:12px}
+.moment h3{font-size:1.45rem;margin-bottom:8px}
+.moment p{margin:0;font-size:.93rem;color:var(--tinta2)}
+
+/* Contacte */
+.contacte{background:radial-gradient(ellipse at 15% 0%,#3a2c20 0%,var(--fosc) 60%);color:#efe5d8}
+.contacte .etiqueta{color:var(--ocre)}
+.contacte h2 em{color:var(--ocre2)}
+.contacte .lead{color:#b9aa9a}
+.contacte-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
+.directe{list-style:none;margin:32px 0 0;padding:0;display:grid;gap:14px}
+.directe a{display:flex;align-items:center;gap:14px;text-decoration:none;color:#efe5d8}
+.directe .ic{width:46px;height:46px;flex:none;border-radius:50%;border:1px solid rgba(207,159,88,.5);display:grid;place-items:center}
+.directe .ic svg{width:20px;height:20px;fill:none;stroke:var(--ocre2);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.directe small{display:block;font-size:.78rem;color:#9d8e7f;letter-spacing:.06em}
+.directe a:hover b{color:var(--ocre2)}
+.formulari{background:var(--paper);color:var(--tinta);border-radius:24px;padding:32px;box-shadow:0 30px 60px rgba(0,0,0,.35)}
+.camps{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.camp{display:flex;flex-direction:column;gap:6px}
+.camp.ample{grid-column:1/-1}
+.camp label{font-size:.82rem;font-weight:600;color:var(--tinta2)}
+.camp input,.camp select,.camp textarea{font:inherit;font-size:.98rem;padding:12px 14px;border-radius:12px;border:1px solid var(--vora);background:var(--blanc);color:var(--tinta);width:100%}
+.camp textarea{min-height:110px;resize:vertical}
+.camp input:focus,.camp select:focus,.camp textarea:focus{outline:2px solid var(--ocre);outline-offset:1px;border-color:transparent}
+.formulari .btn{margin-top:20px;width:100%;justify-content:center}
+.formulari .avis{font-size:.82rem;color:var(--tinta2);text-align:center;margin:12px 0 0}
+.camp.error input{border-color:#b3261e}
+
+footer{background:#15110e;color:#8f8173;text-align:center;padding:40px 20px;font-size:.88rem}
+footer img{width:120px;height:auto;margin:0 auto 12px;opacity:.85}
+footer p{margin:4px 0}
+
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,140%);background:var(--fosc);color:#fff;padding:14px 22px;border-radius:14px;font-size:.92rem;box-shadow:0 12px 30px rgba(0,0,0,.35);transition:transform .35s;z-index:20;max-width:calc(100% - 32px)}
+.toast.vist{transform:translate(-50%,0)}
+
+.revela{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+.revela.vist{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.revela{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+@media (max-width:900px){
+  .menu{display:none}
+  .hero-grid,.nosaltres-grid,.bodes-grid,.contacte-grid{grid-template-columns:1fr;gap:44px}
+  .hero .hero-grid{padding-top:56px;padding-bottom:84px}
+  .foto{width:min(300px,78vw)}
+  .cartes{grid-template-columns:1fr}
+  .moments{grid-template-columns:1fr 1fr}
+  .sec{padding:72px 0}
+}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  .videos{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin-left:-16px;margin-right:-16px;padding:0 16px 8px;scrollbar-width:none}
+  .videos::-webkit-scrollbar{display:none}
+  .video{flex:0 0 68%;scroll-snap-align:start}
+  .pistes,.moments,.camps{grid-template-columns:1fr}
+  .repertori{padding:24px 20px}
+  .repertori ul{columns:1}
+  .formulari{padding:24px 18px}
+  .esp{padding:26px 22px 24px;min-height:0}
+  .esp h3{font-size:1.85rem}
+}
+</style>
 </head>
-<body><p><a href="nadal/">El Nadal [manual d'ús] — Duo Suay</a></p></body>
+<body>
+
+<nav class="menu" aria-label="Menú principal">
+  <div class="wrap">
+    <a class="marca" href="#">Duo Suay</a>
+    <ul>
+      <li><a href="#nosaltres">Nosaltres</a></li>
+      <li><a href="#espectacles">Espectacles</a></li>
+      <li><a href="#bodes">Bodes</a></li>
+      <li><a href="#esdeveniments">Esdeveniments</a></li>
+      <li><a href="#contacte">Contacte</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ============ PORTADA ============ -->
+<header class="hero">
+  <svg class="ones" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true">
+    <g fill="none" stroke="#cf9f58" stroke-width="1.2">
+      <path d="M0 120 C200 40 380 200 600 110 S1000 30 1200 120"/>
+      <path d="M0 140 C220 70 400 210 620 130 S1010 60 1200 140"/>
+      <path d="M0 100 C180 30 420 170 640 90 S980 20 1200 96"/>
+      <path d="M0 160 C240 100 380 220 600 150 S1020 90 1200 165"/>
+      <path d="M0 80 C210 10 400 150 610 70 S990 0 1200 74"/>
+    </g>
+  </svg>
+  <div class="wrap hero-grid">
+    <div>
+      <img class="logo" src="img/logo.png" alt="Duo Suay" width="640" height="330">
+      <h1>Música per a moments que perduren</h1>
+      <p class="sub">Som la <strong>Rosa</strong> i l'<strong>Eli</strong>, un duet vocal de Tarragona. Posem veu a <strong>bodes</strong>, <strong>celebracions</strong> i <strong>espectacles musicals</strong> fets a mida.</p>
+      <div class="botons">
+        <a class="btn btn-ocre" href="#contacte">Demaneu disponibilitat</a>
+        <a class="btn btn-linia" href="#escolteu">Escolteu-nos ♪</a>
+      </div>
+    </div>
+    <div class="foto">
+      <img src="img/duo-cantant.jpg" alt="La Rosa i l'Eli cantant en directe" width="608" height="860">
+      <span class="peu">Rosa Sanahuja · Eli Muñoz</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ NOSALTRES ============ -->
+<section class="sec nosaltres" id="nosaltres">
+  <div class="wrap nosaltres-grid">
+    <div class="revela">
+      <p class="etiqueta">Nosaltres</p>
+      <h2>Dues veus, <em>una mateixa essència</em></h2>
+      <p class="cita">Naixem del diàleg entre dues veus que s'escolten.</p>
+      <p>Som un duet vocal que neix de la complicitat de tota una vida cantant juntes. Busquem l'equilibri, la calidesa i la naturalitat en cada interpretació, sempre amb les dues veus en directe.</p>
+      <p>Cantem música moderna per acompanyar els vostres moments més especials, i creem espectacles musicals propis, amb cançons escrites expressament per a cada història.</p>
+    </div>
+    <div class="tres revela">
+      <a href="#espectacles"><span class="ic" aria-hidden="true">🎭</span><span><b>Espectacles</b><span>Teatre musical i concerts amb cançons pròpies</span></span><span class="fl" aria-hidden="true">→</span></a>
+      <a href="#bodes"><span class="ic" aria-hidden="true">💍</span><span><b>Bodes</b><span>Cerimònies amb la banda sonora que somieu</span></span><span class="fl" aria-hidden="true">→</span></a>
+      <a href="#esdeveniments"><span class="ic" aria-hidden="true">🥂</span><span><b>Esdeveniments</b><span>Celebracions familiars, empreses i homenatges</span></span><span class="fl" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ESPECTACLES ============ -->
+<section class="sec espectacles" id="espectacles">
+  <div class="wrap">
+    <div class="revela">
+      <p class="etiqueta">Espectacles</p>
+      <h2>Històries que <em>es canten</em></h2>
+      <p class="lead">Espectacles de petit format per a ajuntaments, biblioteques, fires, cellers i entitats. Dues veus en directe sobre bases instrumentals enregistrades i cançons fetes a mida.</p>
+    </div>
+    <div class="cartes">
+      <article class="esp e-nadal revela">
+        <span class="estat">Temporada de Nadal</span>
+        <div class="marca" aria-hidden="true">✦</div>
+        <p class="gen">Espectacle musical dramatitzat</p>
+        <h3>El Nadal [manual d'ús]</h3>
+        <p>Set nadales per cantar tots junts i unes intervencions parlades plenes d'humor. El Nadal el fem entre tots, i és apte per a tots els públics.</p>
+        <div class="xips"><span>45 minuts</span><span>7 nadales</span><span>Tots els públics</span></div>
+        <a class="btn" href="nadal/">Descobriu l'espectacle →</a>
+      </article>
+      <article class="esp e-taverna revela">
+        <div class="marca" aria-hidden="true">⚓</div>
+        <p class="gen">Concert · Havaneres, boleros, valsets i rumbes</p>
+        <h3>La Taverna de la Lola</h3>
+        <p>Una taverna marinera on la música, la paraula i la memòria es donen la mà a partir de les històries de la gent del mar. Càlid, proper i amb moltes cançons pròpies.</p>
+        <div class="xips"><span>60 minuts</span><span>Dues veus</span><span>Cançons pròpies</span></div>
+        <a class="btn" href="taverna/">Escolteu-ne les cançons ♪</a>
+      </article>
+      <article class="esp e-mantell revela">
+        <div class="marca" aria-hidden="true">📜</div>
+        <p class="gen">Espectacle medieval · Trobairitz, pergamins i auques</p>
+        <h3>Sota el mantell estelat</h3>
+        <p>Dues trobairitz arriben a la fira amb una arqueta i cinc pergamins lligats amb cintes de colors. Una donzella, un pastor, un comte, una comtessa i un frare que ven relíquies… i, al final, se sap qui els va escriure.</p>
+        <div class="xips"><span>40 minuts</span><span>5 cançons pròpies</span><span>Per a fires medievals</span></div>
+        <a class="btn" href="#contacte" data-tria="Sota el mantell estelat">Demaneu-nos informació</a>
+      </article>
+      <article class="esp e-celler revela">
+        <span class="estat">Nou</span>
+        <div class="marca" aria-hidden="true">🍇</div>
+        <p class="gen">Teatre musical · Una vida entre vinyes</p>
+        <h3>Celler de vida</h3>
+        <p>S'ha acabat la verema i el poble és convidat al celler del mas. Aquest any la mestressa ja no hi és, i la seva filla i la seva nora llegeixen el discurs que va deixar escrit. Una història sobre com la vida continua, amb saba nova.</p>
+        <div class="xips"><span>40 minuts</span><span>5 cançons pròpies</span><span>Per a cellers i teatres</span></div>
+        <a class="btn" href="#contacte" data-tria="Celler de vida">Demaneu-nos informació</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BODES ============ -->
+<section class="sec" id="bodes">
+  <div class="wrap bodes-grid">
+    <div class="revela">
+      <p class="etiqueta">Bodes</p>
+      <h2>El «sí, vull» amb <em>la millor banda sonora</em></h2>
+      <p class="lead">Posem veu als moments més solemnes i emocionants del vostre enllaç.</p>
+      <ol class="passos">
+        <li><span class="n">1</span><div><b>Assessorament musical</b><p>Us ajudem a triar les cançons clau (entrada, anells, vots, sortida…) perquè la cerimònia tingui un fil conductor.</p></div></li>
+        <li><span class="n">2</span><div><b>Repertori a la vostra mida</b><p>Trieu entre les cançons que us proposem. I si teniu «aquella» cançó especial, en parlem i valorem preparar-la.</p></div></li>
+        <li><span class="n">3</span><div><b>Dues veus en directe</b><p>El dia de la boda, només us haureu de preocupar d'emocionar-vos.</p></div></li>
+      </ol>
+      <div class="botons" style="margin-top:32px"><a class="btn btn-ocre" href="#contacte" data-tria="Boda">Consulteu la vostra data</a></div>
+    </div>
+    <div class="repertori revela">
+      <h3>La nostra proposta</h3>
+      <p class="petit">Algunes de les cançons que us podem cantar</p>
+      <ul>
+        <li><b>A Million Dreams</b><span>The Greatest Showman</span></li>
+        <li><b>All of Me</b><span>John Legend</span></li>
+        <li><b>Boig per tu</b><span>Sau</span></li>
+        <li><b>Compta amb mi</b><span>Txarango</span></li>
+        <li><b>Escriurem</b><span>Miki Núñez</span></li>
+        <li><b>Hallelujah</b><span>Leonard Cohen</span></li>
+        <li><b>Marry You</b><span>Bruno Mars</span></li>
+        <li><b>Paraules d'amor</b><span>Joan Manuel Serrat</span></li>
+        <li><b>Perfect</b><span>Ed Sheeran</span></li>
+        <li><b>Que tinguem sort</b><span>Lluís Llach</span></li>
+        <li><b>To Love You More</b><span>Céline Dion</span></li>
+        <li><b>True Colors</b><span>Cyndi Lauper</span></li>
+        <li><b>You Are the Reason</b><span>Calum Scott</span></li>
+      </ul>
+      <p class="nota">Escolteu-ne algunes una mica més avall ↓</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ESCOLTEU-NOS ============ -->
+<section class="sec escolta" id="escolteu">
+  <div class="wrap">
+    <div class="revela">
+      <p class="etiqueta">Escolteu-nos</p>
+      <h2>Així <em>sonem</em></h2>
+      <p class="lead">Gravacions en directe i a l'estudi. Per a la música dels espectacles, visiteu la pàgina de cada un.</p>
+    </div>
+    <div class="videos">
+      <figure class="video revela">
+        <div class="marc"><video src="video/perfect.mp4" poster="video/perfect.jpg" preload="none" playsinline></video><button class="play" type="button" aria-label="Reprodueix Perfect"><span><svg viewBox="0 0 24 24"><path d="M7 5v14l12-7z"/></svg></span></button></div>
+        <figcaption>Perfect<small>Ed Sheeran · en directe</small></figcaption>
+      </figure>
+      <figure class="video revela">
+        <div class="marc"><video src="video/boig-per-tu.mp4" poster="video/boig-per-tu.jpg" preload="none" playsinline></video><button class="play" type="button" aria-label="Reprodueix Boig per tu"><span><svg viewBox="0 0 24 24"><path d="M7 5v14l12-7z"/></svg></span></button></div>
+        <figcaption>Boig per tu<small>Sau · en directe</small></figcaption>
+      </figure>
+      <figure class="video revela">
+        <div class="marc"><video src="video/et-prometo.mp4" poster="video/et-prometo.jpg" preload="none" playsinline></video><button class="play" type="button" aria-label="Reprodueix Et prometo"><span><svg viewBox="0 0 24 24"><path d="M7 5v14l12-7z"/></svg></span></button></div>
+        <figcaption>Et prometo<small>en directe</small></figcaption>
+      </figure>
+    </div>
+    <div class="pistes revela">
+      <button class="pista" type="button" data-src="audio/compta-amb-mi.mp3"><span class="bt"><svg viewBox="0 0 24 24"><path d="M7 5v14l12-7z"/></svg></span><span class="tx"><b>Compta amb mi</b><span>Txarango</span><span class="barra"><i></i></span></span><span class="dur">2:58</span></button>
+      <button class="pista" type="button" data-src="audio/paraules-damor.mp3"><span class="bt"><svg viewBox="0 0 24 24"><path d="M7 5v14l12-7z"/></svg></span><span class="tx"><b>Paraules d'amor</b><span>Joan Manuel Serrat</span><span class="barra"><i></i></span></span><span class="dur">3:30</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ESDEVENIMENTS ============ -->
+<section class="sec" id="esdeveniments">
+  <div class="wrap">
+    <div class="revela">
+      <p class="etiqueta">Esdeveniments</p>
+      <h2>Música per a moments <em>que fan història</em></h2>
+      <p class="lead">Hi ha moments a la vida que mereixen una banda sonora pròpia. Transformem les trobades en records inoblidables amb la calidesa de les nostres veus.</p>
+    </div>
+    <div class="moments">
+      <div class="moment revela"><div class="ic" aria-hidden="true">🎂</div><h3>Celebracions familiars</h3><p>Des d'un aniversari especial fins a una sorpresa emotiva.</p></div>
+      <div class="moment revela"><div class="ic" aria-hidden="true">🏢</div><h3>Empreses</h3><p>Còctels, sopars de Nadal o presentacions on la música aporta distinció.</p></div>
+      <div class="moment revela"><div class="ic" aria-hidden="true">🎖️</div><h3>Jubilacions i homenatges</h3><p>Un comiat o un reconeixement professional que no s'oblidi.</p></div>
+      <div class="moment revela"><div class="ic" aria-hidden="true">✨</div><h3>Moments de vida</h3><p>Batejos, comunions o un sopar especial amb amics sota les estrelles.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACTE ============ -->
+<section class="sec contacte" id="contacte">
+  <div class="wrap contacte-grid">
+    <div class="revela">
+      <p class="etiqueta">Contacte</p>
+      <h2>Parlem del <em>vostre moment</em></h2>
+      <p class="lead">Expliqueu-nos què teniu pensat i us respondrem amb la disponibilitat i una proposta a mida.</p>
+      <ul class="directe">
+        <li><a href="tel:+34666607600"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><span><small>TELÈFON (ELI)</small><b>666 607 600</b></span></a></li>
+        <li><a href="mailto:duosuay@gmail.com"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span><small>CORREU</small><b>duosuay@gmail.com</b></span></a></li>
+        <li><a href="https://instagram.com/duosuay" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></span><span><small>INSTAGRAM</small><b>@duosuay</b></span></a></li>
+      </ul>
+    </div>
+    <form class="formulari revela" id="form" novalidate>
+      <div class="camps">
+        <div class="camp"><label for="f-nom">Nom i cognoms</label><input id="f-nom" name="nom" autocomplete="name" required></div>
+        <div class="camp"><label for="f-mail">Correu electrònic</label><input id="f-mail" name="correu" type="email" autocomplete="email" required></div>
+        <div class="camp"><label for="f-tel">Telèfon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel"></div>
+        <div class="camp"><label for="f-tipus">Què us interessa?</label>
+          <select id="f-tipus" name="tipus">
+            <option>Boda</option><option>Esdeveniment o celebració</option>
+            <option>El Nadal [manual d'ús]</option><option>La Taverna de la Lola</option><option>Sota el mantell estelat</option><option>Celler de vida</option>
+            <option>Una altra cosa</option>
+          </select></div>
+        <div class="camp"><label for="f-data">Data aproximada</label><input id="f-data" name="data" placeholder="p. ex. 14 de juny de 2027"></div>
+        <div class="camp"><label for="f-lloc">Població o lloc</label><input id="f-lloc" name="lloc"></div>
+        <div class="camp ample"><label for="f-msg">Missatge</label><textarea id="f-msg" name="missatge" placeholder="Expliqueu-nos una mica què teniu pensat…"></textarea></div>
+      </div>
+      <button class="btn btn-ocre" type="submit">Envia la consulta</button>
+      <p class="avis">S'obrirà el vostre programa de correu amb la consulta preparada.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <img src="img/logo.png" alt="Duo Suay" width="640" height="330">
+  <p>Rosa Sanahuja i Eli Muñoz</p>
+  <p>© 2026 DUO SUAY · Tots els drets reservats</p>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+var CONTACTE = 'duosuay@gmail.com';
+
+// ---------- Apareixença en fer scroll ----------
+(function(){
+  var els = document.querySelectorAll('.revela');
+  if (!('IntersectionObserver' in window)) { els.forEach(function(e){ e.classList.add('vist'); }); return; }
+  var io = new IntersectionObserver(function(ent){
+    ent.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('vist'); io.unobserve(e.target); } });
+  }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(e){ io.observe(e); });
+})();
+
+// ---------- Toast ----------
+var tTimer;
+function toast(msg){
+  var t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('vist');
+  clearTimeout(tTimer); tTimer = setTimeout(function(){ t.classList.remove('vist'); }, 5200);
+}
+
+// ---------- Només sona una cosa alhora ----------
+var mitjans = [];
+function atura(excepte){ mitjans.forEach(function(m){ if (m !== excepte && !m.paused) m.pause(); }); }
+
+// ---------- Vídeos ----------
+document.querySelectorAll('.video').forEach(function(f){
+  var v = f.querySelector('video'), b = f.querySelector('.play');
+  mitjans.push(v);
+  b.onclick = function(){ v.controls = true; b.hidden = true; atura(v); v.play(); };
+  v.onplay = function(){ atura(v); };
+});
+
+// ---------- Àudios ----------
+(function(){
+  var so = new Audio(), actual = null;
+  var PLAY = 'M7 5v14l12-7z', PAUSA = 'M7 5h3.5v14H7zm6.5 0H17v14h-3.5z';
+  mitjans.push(so);
+  function icona(p, d){ p.querySelector('.bt path').setAttribute('d', d); }
+  document.querySelectorAll('.pista').forEach(function(p){
+    p.onclick = function(){
+      if (actual === p){ so.paused ? so.play() : so.pause(); return; }
+      if (actual){ actual.classList.remove('sona'); icona(actual, PLAY); actual.querySelector('.barra i').style.width = 0; }
+      actual = p; so.src = p.dataset.src; so.play(); p.classList.add('sona');
+    };
+  });
+  so.onplay = function(){ atura(so); if (actual) icona(actual, PAUSA); };
+  so.onpause = function(){ if (actual) icona(actual, PLAY); };
+  so.ontimeupdate = function(){ if (actual && so.duration) actual.querySelector('.barra i').style.width = (so.currentTime / so.duration * 100) + '%'; };
+  so.onended = function(){ if (actual){ actual.classList.remove('sona'); actual.querySelector('.barra i').style.width = 0; icona(actual, PLAY); actual = null; } };
+})();
+
+// ---------- Els botons «Demaneu informació» trien l'opció del formulari ----------
+document.querySelectorAll('[data-tria]').forEach(function(a){
+  a.addEventListener('click', function(){
+    var sel = document.getElementById('f-tipus');
+    [].forEach.call(sel.options, function(o){ if (o.text === a.dataset.tria) sel.value = o.value; });
+  });
+});
+
+// ---------- Formulari → correu ----------
+document.getElementById('form').addEventListener('submit', function(e){
+  e.preventDefault();
+  var f = e.target, ok = true;
+  ['f-nom','f-mail'].forEach(function(id){
+    var c = document.getElementById(id), bo = c.value.trim() && c.checkValidity();
+    c.parentNode.classList.toggle('error', !bo); if (!bo) ok = false;
+  });
+  if (!ok){ toast('Cal omplir el nom i un correu vàlid.'); return; }
+  var tipus = f.tipus.value;
+  var cos = 'Hola, Duo Suay!\n\n'
+    + 'Us escric per: ' + tipus + '\n'
+    + (f.data.value ? 'Data aproximada: ' + f.data.value + '\n' : '')
+    + (f.lloc.value ? 'Lloc: ' + f.lloc.value + '\n' : '')
+    + '\n' + (f.missatge.value || '') + '\n\n'
+    + f.nom.value + '\n' + f.correu.value + (f.telefon.value ? '\n' + f.telefon.value : '');
+  location.href = 'mailto:' + CONTACTE + '?subject=' + encodeURIComponent('Consulta: ' + tipus + ' — ' + f.nom.value) + '&body=' + encodeURIComponent(cos);
+  toast('S\'està obrint el vostre correu…');
+});
+</script>
+</body>
 </html>
