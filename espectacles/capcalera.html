@@ -8,7 +8,7 @@
 <link rel="icon" href="../img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;600;700&family=Wix+Madefor+Text:wght@400;500;600;700&family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
 <!-- Pàgina pensada per incrustar-se (iframe) dins el Wix del duo -->
 <style>
 :root{--fosc:#1e1814;--ocre:#cf9f58;--ocre2:#e9c88f;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Inter',system-ui,sans-serif}
@@ -49,9 +49,31 @@ h2 em{font-style:italic;color:var(--ocre2)}
 .e-mantell .btn:hover,.e-celler .btn:hover{box-shadow:inset 0 0 0 1.5px #fff}
 
 
-html,body{background:var(--fosc)}
+html,body{background:#fff}
 .cap{padding:24px 22px}
 @media (max-width:640px){.cap{padding:20px 16px}}
+
+/* ===== Estètica del Wix del Duo Suay ===== */
+:root{--or:#cb9040;--or2:#b07a2e;--terra:#6f5a3a;--negre:#1a1a1a}
+html,body{color:var(--negre);font-family:'Wix Madefor Text',system-ui,sans-serif}
+.esp{background:#fff!important;color:var(--negre);border:1px solid #000;border-radius:1.4rem;text-align:center;align-items:center}
+.esp .marca{display:none}
+.esp .gen{color:var(--terra);opacity:1;font-family:'Wix Madefor Text',sans-serif;font-weight:600;letter-spacing:.12em}
+.esp h3{font-family:'Wix Madefor Display',sans-serif;font-weight:700;color:var(--or)!important;line-height:1.15}
+.esp p{color:var(--negre)}
+.esp .xips{justify-content:center}
+.esp .xips span{background:#f6efe4;color:var(--terra);border:1px solid #e3d3bb}
+.esp .estat{align-self:center;background:var(--or);color:#fff}
+.esp .btn{align-self:center;font-family:'Wix Madefor Text',sans-serif;background:var(--or)!important;color:#fff!important;box-shadow:none!important}
+.esp .btn:hover{background:var(--or2)!important;transform:none}
+.e-mantell .btn,.e-celler .btn{background:#fff!important;color:var(--or2)!important;box-shadow:inset 0 0 0 1.5px var(--or)!important}
+.e-mantell .btn:hover,.e-celler .btn:hover{background:#fbf5ec!important}
+/* capçalera */
+.cap{background:#fff}
+.cap .etiqueta{display:none}
+.cap h2{font-family:'Dancing Script',cursive;font-weight:400;color:var(--or);font-size:clamp(2.2rem,6vw,3.6rem);margin-bottom:.6rem}
+.cap h2 em{font-style:normal;color:var(--or)}
+.cap .lead{color:var(--negre);font-size:clamp(1rem,2.2vw,1.35rem);max-width:none;line-height:1.45}
 </style>
 </head>
 <body>
