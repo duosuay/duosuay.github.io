@@ -56,7 +56,7 @@ body{padding:0}
 @media (max-width:640px){.esp{padding:20px 18px 18px}.esp h3{font-size:1.6rem}}
 
 /* La lletra creix amb la mida del requadre del Wix */
-html{font-size:clamp(16px,min(3.1vw,4.4vh),30px)}
+html{font-size:16px}
 .esp{padding:1.4rem 1.4rem 1.25rem}
 .esp p{font-size:1rem}
 .esp .xips{gap:.4rem}
@@ -77,5 +77,29 @@ html{font-size:clamp(16px,min(3.1vw,4.4vh),30px)}
       <div class="xips"><span>45 minuts</span><span>8 nadales</span><span>Tots els públics</span></div>
       <a class="btn" href="https://duosuay.github.io/nadal/" target="_blank" rel="noopener">Descobriu l'espectacle →</a>
     </article>
+<script>
+// Tria la lletra més gran amb què el requadre hi cap sencer, i els quatre
+// requadres del Wix es posen d'acord per fer servir tots la mateixa (la més petita)
+(function(){
+  var html=document.documentElement, esp=document.querySelector('.esp');
+  var jo='nadal', meves={}, canal=null;
+  try{ canal=new BroadcastChannel('duosuay-espectacles'); }catch(e){}
+  function maxim(){
+    esp.style.minHeight='0';
+    var lo=15, hi=34, H=innerHeight-8;
+    while(hi-lo>0.25){ var m=(lo+hi)/2; html.style.fontSize=m+'px'; (esp.offsetHeight<=H)?lo=m:hi=m; }
+    esp.style.minHeight=''; return lo;
+  }
+  function aplica(){ var v=34; for(var k in meves) v=Math.min(v,meves[k]); html.style.fontSize=v+'px'; }
+  function ajusta(){ meves[jo]=maxim(); aplica(); if(canal) canal.postMessage({id:jo,v:meves[jo]}); }
+  if(canal) canal.onmessage=function(e){
+    var d=e.data||{}; if(d.qui){ if(meves[jo]) canal.postMessage({id:jo,v:meves[jo]}); return; }
+    if(d.id && d.id!==jo){ meves[d.id]=d.v; aplica(); }
+  };
+  ajusta(); if(canal) canal.postMessage({qui:1});
+  addEventListener('resize',function(){ meves={}; ajusta(); if(canal) canal.postMessage({qui:1}); });
+  if(document.fonts) document.fonts.ready.then(ajusta);
+})();
+</script>
 </body>
 </html>
