@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Demaneu-nos informació — Duo Suay</title>
+<meta name="description" content="Sol·licitud d'informació per programar els espectacles musicals del Duo Suay.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0d2a22">
+<link rel="icon" href="../img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,800;1,9..144,400&family=Inter:wght@400;500;600;700&family=Special+Elite&display=swap" rel="stylesheet">
+<style>
+:root{
+  --nit:#0d2a22; --grana:#a3162b; --grana2:#7d0f20; --or2:#f3d58c;
+  --paper:#f8f2e4; --tinta:#2a1d14; --tinta2:#6b5848;
+  --serif:'Fraunces',Georgia,serif; --sans:'Inter',system-ui,sans-serif; --maq:'Special Elite','Courier New',monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;background:radial-gradient(ellipse at 20% 0%,#1d4a3c 0%,var(--nit) 60%) fixed,var(--nit);color:#fff;font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+main{flex:1;padding:52px 0}
+.grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+.grid>*{min-width:0}
+.logo{display:inline-block;margin-bottom:26px}
+.logo img{height:64px;width:auto;display:block}
+.etiqueta{font-family:var(--maq);color:var(--or2);font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;margin:0 0 12px;display:flex;align-items:center;gap:10px}
+.etiqueta::before{content:"";width:28px;height:2px;background:currentColor}
+h1{font-family:var(--serif);font-weight:800;font-size:clamp(1.7rem,3.4vw,2.4rem);line-height:1.08;letter-spacing:-.015em;margin:0 0 18px}
+h1 em{font-weight:400;color:var(--or2)}
+.lead{font-size:1.1rem;color:#c7dad2;margin:0 0 22px}
+.directe{list-style:none;margin:0;padding:0;display:grid;gap:8px;color:#c7dad2;font-size:.95rem}
+.directe b{color:#fff}
+.directe a{text-decoration:none}
+.formulari{background:var(--paper);color:var(--tinta);border-radius:22px;padding:30px;box-shadow:0 30px 60px rgba(0,0,0,.35);position:relative}
+.formulari::before{content:"SOL·LICITUD D'INFORMACIÓ";position:absolute;top:-12px;left:24px;background:var(--grana);color:#fff;font-family:var(--maq);font-size:.7rem;letter-spacing:.1em;padding:5px 12px;border-radius:6px}
+.camps{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.camp{display:flex;flex-direction:column;gap:6px}
+.camp.ample{grid-column:1/-1}
+.camp label{font-size:.82rem;font-weight:600;color:var(--tinta2)}
+.camp input,.camp select,.camp textarea{font:inherit;font-size:1rem;color:var(--tinta);background:#fff;border:1.5px solid #e2d6bc;border-radius:12px;padding:12px 14px;outline:none;transition:border-color .2s,box-shadow .2s;width:100%}
+.camp textarea{min-height:96px;resize:vertical}
+.camp input:focus,.camp select:focus,.camp textarea:focus{border-color:var(--grana);box-shadow:0 0 0 4px rgba(163,22,43,.12)}
+.btn{display:flex;width:100%;justify-content:center;align-items:center;gap:10px;margin-top:18px;font:700 1rem var(--sans);border:0;border-radius:999px;padding:15px 26px;cursor:pointer;background:var(--grana);color:#fff;box-shadow:0 10px 24px rgba(163,22,43,.3);transition:background .2s,transform .2s}
+.btn:hover{background:var(--grana2);transform:translateY(-2px)}
+.avis{font-size:.82rem;color:var(--tinta2);margin:12px 0 0;text-align:center}
+.pla-b{display:none;margin-top:16px;background:#fff;border:1.5px dashed #d8c7a3;border-radius:14px;padding:14px 16px;font-size:.9rem;color:var(--tinta2)}
+.pla-b.vist{display:block}
+.pla-b b{color:var(--tinta)}
+.pla-b button{margin-top:10px;font:600 .9rem var(--sans);border:1.5px solid var(--grana);color:var(--grana);background:none;border-radius:999px;padding:8px 16px;cursor:pointer}
+footer{background:#081c16;color:#8fb0a3;padding:26px 0;font-size:.88rem;text-align:center}
+footer p{margin:4px 0}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,calc(100% + 40px));background:var(--tinta);color:#fff;padding:14px 20px;border-radius:14px;box-shadow:0 16px 40px rgba(0,0,0,.35);font-size:.95rem;max-width:min(440px,calc(100vw - 32px));z-index:50;visibility:hidden;transition:transform .45s cubic-bezier(.2,1.4,.4,1),visibility 0s .45s}
+.toast.vist{transform:translate(-50%,0);visibility:visible;transition:transform .45s cubic-bezier(.2,1.4,.4,1)}
+.toast b{color:var(--or2)}
+@media (max-width:900px){.grid{grid-template-columns:1fr;gap:34px}main{padding:35px 0}}
+@media (max-width:560px){.wrap{padding:0 16px}.camps{grid-template-columns:1fr}.formulari{padding:26px 18px 22px}.logo img{height:52px}}
+</style>
+</head>
+<body>
+<main>
+  <div class="wrap grid">
+    <div>
+      <a class="logo" href="../"><img src="../img/logo.png" alt="Duo Suay" width="640" height="330"></a>
+      <p class="etiqueta">Contractació</p>
+      <h1>Programeu el nostre espectacle musical dramatitzat, <em>apte per a tots els públics</em></h1>
+      <p class="lead">Ajuntaments, biblioteques, entitats, escoles i empreses: expliqueu-nos què teniu pensat i us enviarem la proposta amb dates i condicions.</p>
+      <ul class="directe">
+        <li>Telèfon (Eli): <a href="tel:+34666607600"><b>666 607 600</b></a></li>
+        <li>Correu: <a href="mailto:duosuay@gmail.com"><b>duosuay@gmail.com</b></a></li>
+      </ul>
+    </div>
+    <form class="formulari" id="form" novalidate>
+      <div class="camps">
+        <div class="camp ample"><label for="f-obra">Espectacle</label>
+          <select id="f-obra" name="obra">
+            <option value="nadal">El Nadal [manual d'ús]</option>
+            <option value="taverna">La Taverna de la Lola</option>
+            <option value="mantell">Sota el mantell estelat</option>
+            <option value="celler">Celler de vida</option>
+            <option value="altre">Encara no ho sabem</option>
+          </select></div>
+        <div class="camp"><label for="f-nom">Nom i cognoms</label><input id="f-nom" name="nom" autocomplete="name" required></div>
+        <div class="camp"><label for="f-ent">Entitat o ajuntament</label><input id="f-ent" name="entitat" autocomplete="organization"></div>
+        <div class="camp"><label for="f-mail">Correu electrònic</label><input id="f-mail" name="correu" type="email" autocomplete="email" required></div>
+        <div class="camp"><label for="f-tel">Telèfon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel"></div>
+        <div class="camp"><label for="f-data">Data aproximada</label><input id="f-data" name="data" placeholder="p. ex. 20 de desembre"></div>
+        <div class="camp"><label for="f-esp">Tipus d'espai</label>
+          <select id="f-esp" name="espai"><option>Teatre o auditori</option><option>Biblioteca</option><option>Casal o centre cívic</option><option>Fira o plaça</option><option>Celler</option><option>Escola</option><option>Residència</option><option>Festa d'entitat o empresa</option><option>Un altre</option></select></div>
+        <div class="camp ample"><label for="f-msg">Missatge</label><textarea id="f-msg" name="missatge" placeholder="Població, públic previst, horari…"></textarea></div>
+      </div>
+      <button class="btn" type="submit">Envia la sol·licitud ✦</button>
+      <p class="avis">S'obrirà el vostre programa de correu amb la sol·licitud preparada.</p>
+      <div class="pla-b" id="pla-b">
+        No s'ha obert cap programa de correu? Copieu la sol·licitud i enganxeu-la en un correu a <b>duosuay@gmail.com</b>.<br>
+        <button type="button" id="copia">Copia la sol·licitud</button>
+      </div>
+    </form>
+  </div>
+</main>
+
+<footer>
+  <p><a href="../">Duo Suay</a> · Rosa Sanahuja i Eli Muñoz</p>
+  <p>© 2026 DUO SUAY · Tots els drets reservats</p>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+var CONTACTE = 'duosuay@gmail.com';
+var f = document.getElementById('form'), cos = '', assumpte = '';
+
+// Espectacle triat des de l'enllaç (?esp=mantell, celler, taverna, nadal)
+(function(){
+  var m = /[?&]esp=([a-z]+)/.exec(location.search);
+  if (m && f.obra.querySelector('option[value="' + m[1] + '"]')) f.obra.value = m[1];
+})();
+
+var tTimer;
+function toast(msg){
+  var t = document.getElementById('toast');
+  t.innerHTML = msg; t.classList.add('vist');
+  clearTimeout(tTimer); tTimer = setTimeout(function(){ t.classList.remove('vist'); }, 5200);
+}
+
+f.addEventListener('submit', function(e){
+  e.preventDefault();
+  var nom = f.nom.value.trim(), correu = f.correu.value.trim();
+  if (!nom || !/^\S+@\S+\.\S+$/.test(correu)){
+    toast('Cal omplir com a mínim el <b>nom</b> i un <b>correu</b> vàlid.');
+    return;
+  }
+  var obra = f.obra.options[f.obra.selectedIndex].text;
+  assumpte = 'Sol·licitud: ' + obra;
+  cos = 'Espectacle: ' + obra + '\nNom: ' + nom + '\nEntitat: ' + f.entitat.value + '\nCorreu: ' + correu
+    + '\nTelèfon: ' + f.telefon.value + '\nData aproximada: ' + f.data.value + '\nEspai: ' + f.espai.value
+    + '\n\n' + f.missatge.value;
+  location.href = 'mailto:' + CONTACTE + '?subject=' + encodeURIComponent(assumpte) + '&body=' + encodeURIComponent(cos);
+  // Si l'ordinador no té programa de correu, no passa res: oferim copiar-ho
+  setTimeout(function(){ document.getElementById('pla-b').classList.add('vist'); }, 1500);
+});
+
+document.getElementById('copia').addEventListener('click', function(){
+  var text = assumpte + '\n\n' + cos;
+  function fet(){ toast('Copiat! Enganxeu-lo en un correu a <b>' + CONTACTE + '</b>.'); }
+  if (navigator.clipboard && window.isSecureContext){
+    navigator.clipboard.writeText(text).then(fet, vell);
+  } else vell();
+  function vell(){
+    var a = document.createElement('textarea'); a.value = text; document.body.appendChild(a);
+    a.select(); try { document.execCommand('copy'); fet(); } catch(e){} a.remove();
+  }
+});
+</script>
+</body>
+</html>

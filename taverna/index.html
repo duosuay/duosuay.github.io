@@ -93,7 +93,8 @@ p{margin:0 0 10px}
 .fusta-sec .ma{color:#e7a37f}
 .fusta-sec p{color:#e2d2bc}
 .escena{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
-.escena img{border-radius:14px;box-shadow:0 26px 50px rgba(0,0,0,.45);border:6px solid #2a1a0f}
+.escena .video{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;box-shadow:0 26px 50px rgba(0,0,0,.45);border:6px solid #2a1a0f;background:#000}
+.escena .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .llista-esc{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:6px}
 .llista-esc li{display:flex;gap:12px;align-items:center;font-size:.98rem;color:#efe1cc}
 .llista-esc li span{width:34px;height:34px;flex:none;border-radius:50%;background:rgba(255,255,255,.08);display:grid;place-items:center}
@@ -210,12 +211,13 @@ footer p{margin:4px 0}
 <!-- ============ ESCENOGRAFIA ============ -->
 <section class="sec fusta-sec">
   <div class="wrap escena">
-    <img src="img/escenografia.jpg" alt="Escenografia de la Taverna de la Lola: persianes de fusta, garlandes de llums, taules, tamborets i el rètol de la taverna" width="1280" height="853" loading="lazy">
+    <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/cKt5mOwFc7I?rel=0" title="La Taverna de la Lola — teaser en directe" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
     <div>
-      <p class="etiqueta">L'escenari</p>
+      <p class="etiqueta">En directe</p>
       <h2>Entreu a la taverna</h2>
       <p class="ma">i seieu, que comença la música</p>
-      <p>L'escenari es converteix en una taverna de port, càlida i acollidora.</p>
+      <p>Un tast de l'espectacle: el teaser de l'actuació en directe a La Nou de Gaià, l'octubre passat.</p>
+      <p>Així es transforma l'escenari en una taverna de port, càlida i acollidora:</p>
       <ul class="llista-esc">
         <li><span aria-hidden="true">🪵</span>Persianes i mobles de fusta</li>
         <li><span aria-hidden="true">💡</span>Garlandes de llum i fanals</li>
@@ -280,7 +282,7 @@ footer p{margin:4px 0}
         </ul>
       </div>
     </div>
-    <a class="dossier" href="img/dossier-taverna.jpg" download="La Taverna de la Lola - Dossier.jpg">
+    <a class="dossier" href="dossier-taverna-de-la-lola.pdf" download="La-Taverna-de-la-Lola-Dossier.pdf" type="application/pdf">
       <img src="img/dossier-taverna.jpg" alt="" width="1054" height="1492" loading="lazy">
       <div><b>Dossier de l'espectacle</b><span>Descarregueu-lo i compartiu-lo</span></div>
       <span class="fl" aria-hidden="true">↓</span>
