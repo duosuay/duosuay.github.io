@@ -113,6 +113,18 @@ p{margin:0 0 10px}
 .sc-boto .btn:hover{background:var(--rovell)}
 .nota{text-align:center;font-size:.84rem;color:var(--cel2);margin-top:10px}
 
+/* ---------- Als mitjans ---------- */
+.mitjans-sec{background:#fff;border-top:1px solid var(--sorra2)}
+.mencions{display:grid;gap:16px;margin-top:16px}
+.mencio{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:center;background:var(--sorra);border:1px solid var(--sorra2);border-radius:18px;padding:14px;box-shadow:0 10px 26px rgba(22,58,95,.06)}
+.mencio .video{position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000}
+.mencio .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.mencio .mitja{display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--rovell);border-radius:999px;padding:4px 12px;margin-bottom:10px}
+.mencio h3{font-family:var(--serif);font-weight:600;font-size:1.45rem;color:var(--mar);margin-bottom:6px}
+.mencio .data{font-size:.88rem;color:var(--tinta2);margin-bottom:12px}
+.mencio .enllac{font-weight:600;font-size:.95rem;color:var(--mar2);text-decoration:none}
+.mencio .enllac:hover{color:var(--rovell)}
+
 /* ---------- Fitxa ---------- */
 .fitxes{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:18px}
 .fitxa{background:#fff;border:1px solid var(--sorra2);border-radius:18px;padding:18px 20px 14px;box-shadow:0 10px 26px rgba(22,58,95,.06)}
@@ -144,7 +156,8 @@ footer{background:var(--mar3);color:var(--cel2);text-align:center;font-size:.84r
 footer p{margin:4px 0}
 
 @media (max-width:860px){
-  .hero-grid,.dues,.escena{grid-template-columns:1fr;gap:22px}
+  .hero-grid,.dues,.escena,.mencio{grid-template-columns:1fr;gap:22px}
+  .mencio{gap:14px;padding:12px 12px 16px}
   .hero .hero-grid{padding-top:48px;padding-bottom:6px}
   .il{max-width:300px;margin:0 auto}
   .il .segell{width:74px;height:74px}
@@ -233,6 +246,26 @@ footer p{margin:4px 0}
     <div class="sc"><iframe title="La Taverna de la Lola a SoundCloud" height="420" scrolling="no" allow="autoplay; encrypted-media" loading="lazy" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F2278748534&color=%23d9774f&visual=false&show_artwork=true&show_comments=false&show_reposts=false&show_teaser=false&hide_related=true"></iframe></div>
     <p class="sc-boto"><a class="btn btn-mar" href="https://soundcloud.com/duosuay/donam-llum?in=duosuay/sets/la-taverna-de-la-lola" target="_blank" rel="noopener">Escolteu-les a SoundCloud ♪</a></p>
     <p class="nota">Cançons pròpies de l'espectacle · © Tots els drets reservats</p>
+  </div>
+</section>
+
+<!-- ============ ALS MITJANS ============ -->
+<section class="sec mitjans-sec" id="mitjans">
+  <div class="wrap">
+    <p class="etiqueta">Als mitjans</p>
+    <h2>Ens n'han parlat</h2>
+    <p class="ma">la taverna, a la televisió</p>
+    <div class="mencions">
+      <article class="mencio">
+        <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/ucu9qgqM7Uk?rel=0" title="«La taverna de la Lola» del Duo Suay al Casal d'Avis — Canal Camp" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        <div>
+          <span class="mitja">Canal Camp</span>
+          <h3>«La taverna de la Lola» del Duo Suay al Casal d'Avis</h3>
+          <p class="data">Reportatge · novembre 2026 · 2:40 min</p>
+          <a class="enllac" href="https://www.youtube.com/watch?v=ucu9qgqM7Uk" target="_blank" rel="noopener">Mireu-lo a YouTube ↗</a>
+        </div>
+      </article>
+    </div>
   </div>
 </section>
 
